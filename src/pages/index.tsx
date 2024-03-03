@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link, type HeadFC, type PageProps } from "gatsby";
 import Layout from "../components/layout";
+import { StaticImage } from "gatsby-plugin-image";
 
 // const pageStyles = {
 //   color: "#232129",
@@ -190,6 +191,11 @@ const IndexPage: React.FC<PageProps> = () => {
       <main>
         <h1>Welcome to AX</h1>
         <p>A place for sharing my answers to your questions</p>
+        <StaticImage
+          className="ima"
+          alt="Gatsby Image"
+          src="../images/icon.png"
+        />
       </main>
     </Layout>
   );
