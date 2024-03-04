@@ -1,5 +1,5 @@
 import * as React from "react";
-import NavBar from "./navbar";
+import NavBar from "./navBar";
 
 interface Props {
   pageTitle: string;

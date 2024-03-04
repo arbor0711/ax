@@ -1,0 +1,235 @@
+# Using Context API or Redux (Unbiased Perspective)
+
+Those who know me, know that I am very fanatical about context api. The reason is having a series of standards and a series of good facilities that make the work easier.
+
+You can almost say that I have been familiar with Redux for two years. (Because it's hard to say what you have mastered or not. I can't say that I have mastered. Those who say that they have 100 percent mastery over something are very brave).
+I agree very much with what Amer Lotfi said (Trumpet programmer), all these are just tools and we need to know which one to use and where.
+In the end, that's really it.
+But I also have a series of misplaced prejudices about the operating system, tools, libraries, etc. that I like to write and read about.
+
+Redux is a predictable state container for JavaScript apps. It is a flexible and powerful framework for monitoring changes in states within JavaScript applications (mobile, web, etc.) created by Dan Abramov, the author of this library. Those who know Dan Abramov, know his words carry weight. They say whatever he says is true. But from my perspective, it's not like that. There are many others who are even more powerful than him, but because they are not well-known, their words don't carry weight. There are also individuals in Iran who are really doing a good job and are even more powerful than him. We need to consider everyone's perspective on what they say. Maybe Dan Abramov, because of the talks he gives about Redux, is not inclined to say that context is a substitute for Redux. (Or not). So, we need to do our own research.
+
+Redux was very heavy at first and working with it was really annoying. But over time, both working with it was justified and the ways of writing it became easier. But the ease of working with it cannot be compared to Context.
+
+I don't want to say how to write code. I'll just give two examples and continue the discussion.
+
+## Example Code:
+
+### Action.js
+
+```
+// Action Types
+export const COUNTER_INCREMENT = 'COUNTER_INCREMENT'
+export const COUNTER_DECREMENT = 'COUNTER_DECREMENT'
+
+// Action Creators
+export function incrementCounter () {
+return {
+type: COUNTER_INCREMENT
+}
+}
+
+export function decrementCounter() {
+  return {
+    type: COUNTER_DECREMENT,
+  };
+}
+```
+
+### Reducer.js
+
+```
+import {
+COUNTER_INCREMENT,
+COUNTER_DECREMENT
+} from './actions'
+
+const counterInitialState = {
+count: 0
+}
+
+function counterReducer (state = counterInitialState, action) {
+switch (action.type) {
+case COUNTER_INCREMENT:
+return Object.assign({}, state, { count: ++state.count })
+case COUNTER_DECREMENT:
+return Object.assign({}, state, { count: --state.count })
+default:
+return state
+}
+}
+export default counterReducer
+```
+
+### store.js
+
+```
+import { createStore } from "redux";
+import reducers from "./reducers";
+
+export default createStore(reducers);
+```
+
+### app.js
+
+```
+import { Provider } from "react-redux";
+import store from "./store";
+import Counter from "./counter";
+
+class App extends Component {
+render() {
+return (
+<Provider store={store}>
+<div className="app">
+Redux Example
+<Counter />
+</div>
+</Provider>
+)
+}
+}
+```
+
+### counter.js
+
+```
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { incrementCounter, decrementCounter } from "./actions";
+
+const mapDispatchToProps = dispatch => ({
+increment: () => dispatch(incrementCounter()),
+decrement: () => dispatch(decrementCounter())
+})
+
+const mapStateToProps = state => ({
+counter: state.count
+})
+
+class Counter extends Component {
+render () {
+return (
+<div className="counter">
+Counter: <span>{this.props.counter}</span>
+<div>
+<button ={ this.props.decrement }>-</button>
+<button ={ this.props.increment }>+</button>
+</div>
+</div>
+)
+}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+```
+
+Now that the project is running, we have a counter that starts counting from 1.
+
+Now I want to change this project to use Context API. Interesting things happen. I change these components and turn the project into Context.
+
+## Second Example:
+
+Create context.js file
+
+import { createContext } from "react";
+
+export const { Provider, Consumer } = createContext({
+  count: 0,
+  increment: () => {},
+  decrement: () => {},
+});
+
+app.js
+
+import React, { Component } from "react";
+import Counter from "./counter";
+import { Provider as CounterProvider } from "./context.js";
+
+import "./app.css";
+
+class App extends Component {
+state = {
+count: 0,
+increment: () => { this.setState({count: this.state.count + 1}) },
+decrement: () => { this.setState({count: this.state.count - 1}) }
+}
+
+render() {
+return (
+
+<CounterProvider value={this.state}>
+  <div className="app">
+    Redux Example
+    <Counter />
+  </div>
+</CounterProvider>
+) } }
+
+export default App;
+
+counter.js
+
+import React, { Component } from "react";
+import { Consumer as CounterConsumer } from "./context";
+
+class Counter extends Component {
+render () {
+return (
+
+<CounterConsumer>
+{
+({count, increment, decrement}) => (
+<div className="counter">
+Counter: <span>{ count }</span>
+<div>
+<button ={ decrement }>-</button>
+<button ={ increment }>+</button>
+</div>
+</div>
+)
+}
+</CounterConsumer>
+)
+}
+}
+
+export default Counter;
+
+Good, that's it.
+
+The changes that occurred were the removal of reducer, actions, and store.
+
+Removing the connect function as an HOC that affects each component's rendering.
+
+Of course, this was from the perspective of the simplicity of Context compared to Redux.
+
+Technical Perspective:
+
+The perspective I'm presenting is not a biased perspective. Rather, it's a general perspective on the two systems.
+
+Context API's performance compared to Redux is notably better due to its use of memoization. Redux, on the other hand, repeats a process within connect by using mapStateToProps. This means if a component is called 100 times, the mapping process will be repeated 100 times, ultimately returning to its original state.
+
+I came across this response in the following link, which is quite insightful:
+
+https://www.reddit.com/r/reactjs/comments/a5sddz/redux_vs_context_api_performance/
+
+Other factors that can be compared between these two systems include their usage in large-scale applications. PayPal is very satisfied with the use of Redux, but they haven't transitioned to Context API yet. In fact, there hasn't been a highly trafficked website built solely with Context API (or it hasn't been updated yet). For this reason, it's not reasonable to claim whether it's better or not. In reality, performance is much better on a small scale, but there's a possibility that this claim might not hold true on a large scale.
+
+Features like Redux Thunk have contributed to the popularity of Redux, which are not seen within Context API. These additional features have elevated Redux above Context API.
+
+However, we are still awaiting significant changes in Context API for versions 16.8 and above. So far, the list of announced changes hasn't mentioned anything about Context API.
+
+Dan Abramov's Statements:
+
+Now, why do I disagree with his statements?
+
+In a tweet, he mentioned:
+
+"Most apps that use Redux today probably don’t need it. But I’m glad to hear success stories about cases where Redux-like architecture ends up being actually useful."
+
+However, in response to the same tweet, he wrote:
+
+"Context is what powers React Redux under the hood. The new context API isn’t to 'replace Redux', it just fixes a broken feature that needs to be provided by React. Whether you use it directly or through another API like RR is up to you."
+
+For this reason, I can't rely on statements that are subject to change at any moment.
