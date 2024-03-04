@@ -1,13 +1,12 @@
 import { PageProps, HeadFC, Link } from "gatsby";
 import * as React from "react";
 import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 const AboutPage: React.FC<PageProps> = () => {
   return (
     <Layout pageTitle="About Me">
       <main>
-        <h1>About</h1>
-
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. In
           laudantium harum eligendi repudiandae, sint illo, id ut odio repellat
@@ -21,9 +20,4 @@ const AboutPage: React.FC<PageProps> = () => {
 
 export default AboutPage;
 
-export const Head: HeadFC = () => (
-  <>
-    <title>About Me</title>
-    <meta name="description" content="Your description" />
-  </>
-);
+export const Head = () => <Seo title="About you" />;
