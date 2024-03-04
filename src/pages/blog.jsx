@@ -4,15 +4,16 @@ import Layout from "../components/layout";
 import { graphql } from "gatsby";
 
 const BlogPage = ({ data }) => {
-  console.log("data:", data);
   return (
     <Layout pageTitle="My blog posts">
-      <p> Choose what you want</p>
-      <ul>
-        {data.allFile.nodes.map((node) => (
-          <li>- {node.name}</li>
-        ))}
-      </ul>
+      {data.allMdx.nodes.map((node) => (
+        <article key={node.id}>
+          <h2>{node.frontmatter.title}</h2>
+          <p>Posted: {node.frontmatter.date}</p>
+          <p>{node.excerpt}</p>
+          <br />
+        </article>
+      ))}
     </Layout>
   );
 };
@@ -24,10 +25,15 @@ export const Head = () => {
 };
 
 export const query = graphql`
-  {
-    allFile {
+  query {
+    allMdx(sort: { frontmatter: { date: DESC } }) {
       nodes {
-        name
+        frontmatter {
+          date(formatString: "MMMM D, YYYY")
+          title
+        }
+        id
+        excerpt
       }
     }
   }
