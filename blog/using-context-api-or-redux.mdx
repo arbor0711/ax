@@ -1,10 +1,10 @@
 ---
 title: "Using Context API or Redux (Unbiased Perspective)"
 date: "2021-07-23"
-slug: "Using Context API or Redux"
+slug: "using-context-api-or-redux"
 ---
 
-Those who **know me**, know that I am very fanatical about context api. The reason is having a series of standards and a series of good facilities that make the work easier.
+Those who know me, know that I am very fanatical about context api. The reason is having a series of standards and a series of good facilities that make the work easier.
 
 You can almost say that I have been familiar with Redux for two years. (Because it's hard to say what you have mastered or not. I can't say that I have mastered. Those who say that they have 100 percent mastery over something are very brave).
 I agree very much with what Amer Lotfi said (Trumpet programmer), all these are just tools and we need to know which one to use and where.
@@ -17,9 +17,9 @@ Redux was very heavy at first and working with it was really annoying. But over 
 
 I don't want to say how to write code. I'll just give two examples and continue the discussion.
 
-## Example Code:
+# Example Code:
 
-### Action.js
+Action.js
 
 ```
 // Action Types
@@ -136,6 +136,7 @@ Now I want to change this project to use Context API. Interesting things happen.
 
 Create context.js file
 
+```
 import { createContext } from "react";
 
 export const { Provider, Consumer } = createContext({
@@ -143,9 +144,11 @@ export const { Provider, Consumer } = createContext({
   increment: () => {},
   decrement: () => {},
 });
+```
 
 app.js
 
+```
 import React, { Component } from "react";
 import Counter from "./counter";
 import { Provider as CounterProvider } from "./context.js";
@@ -171,9 +174,11 @@ return (
 ) } }
 
 export default App;
+```
 
 counter.js
 
+```
 import React, { Component } from "react";
 import { Consumer as CounterConsumer } from "./context";
 
@@ -199,6 +204,7 @@ Counter: <span>{ count }</span>
 }
 
 export default Counter;
+```
 
 Good, that's it.
 

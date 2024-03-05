@@ -15,7 +15,6 @@ const Seo = ({ title }: Props) => {
       }
     }
   `);
-  console.log(data, title);
   return (
     <title>
       {title} | {data.site.siteMetadata.title}
