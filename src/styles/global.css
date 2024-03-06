@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+}
+/* @font-face {
+  font-family: Roboto;
+  src: url ("../fonts/Roboto-Regular.woff2") (format("woff2"));
+  font-weight: normal;
+}
+@font-face {
+  font-family: Roboto;
+  src: url ("../fonts/Roboto-Bold.woff2") (format("woff2"));
+  font-weight: bold;
+} */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: rgb(6, 3, 24);
+  }
+}
+body {
+  color: rgb(179, 179, 179);
+}
+
+/* By default when we use Tailwind our element are unstyled. On the top I have 3 directives(baxshname-rahnama) to import 3 layers in tailwind
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  I can use other directive for overriding the styles in the base layers. =>
+  */
+@layer base {
+  /* I apply tailwind classes to all my h1 elements to be decent(araste) */
+  html {
+    font-family: Roboto, system-ui, sans-serif;
+  }
+  h1 {
+    @apply font-bold text-2xl mb-2;
+  }
+  p {
+    @apply font-normal text-lg;
+  }
+}

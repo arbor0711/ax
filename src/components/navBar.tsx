@@ -1,4 +1,5 @@
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 
 const NavBar = () => {
@@ -8,7 +9,12 @@ const NavBar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <Link to="/" className="text-white text-xl font-bold">
-              aX
+              <StaticImage
+                className=""
+                alt="Gatsby Image"
+                src="../images/logo-dark.png"
+                width={150}
+              />
             </Link>
           </div>
           <div className="hidden md:block">
