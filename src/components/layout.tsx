@@ -9,14 +9,14 @@ interface Props {
 
 const Layout: React.FC<Props> = ({ pageTitle, children }) => {
   return (
-    <div className="relative bg-bermuda">
+    <>
       <NavBar />
-      <main className="p-5 h-full">
+      <main className="p-5 h-full mb-96 ">
         <h1 className="">{pageTitle}</h1>
         {children}
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 export default Layout;
