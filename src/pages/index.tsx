@@ -195,7 +195,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <StaticImage
           className="ima"
           alt="Gatsby Image"
-          src="../images/icon.png"
+          src="../images/logo-dark.png"
         />
       </main>
     </Layout>
