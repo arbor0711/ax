@@ -21,20 +21,18 @@ Redux was very heavy at first and working with it was really annoying. But over 
 
 I don't want to say how to write code. I'll just give two examples and continue the discussion.
 
-# Example Code:
+## Example Code:
 
-Action.js
-
-```
+```js title="Action.js"
 // Action Types
-export const COUNTER_INCREMENT = 'COUNTER_INCREMENT'
-export const COUNTER_DECREMENT = 'COUNTER_DECREMENT'
+export const COUNTER_INCREMENT = "COUNTER_INCREMENT";
+export const COUNTER_DECREMENT = "COUNTER_DECREMENT";
 
 // Action Creators
-export function incrementCounter () {
-return {
-type: COUNTER_INCREMENT
-}
+export function incrementCounter() {
+  return {
+    type: COUNTER_INCREMENT,
+  };
 }
 
 export function decrementCounter() {

@@ -7,9 +7,15 @@ import { graphql } from "gatsby";
 const BlogPost = ({ data, children }) => {
   const image = getImage(data.mdx.frontmatter.hero_image);
   return (
-    <Layout pageTitle="data.mdx.frontmatter.title">
+    <Layout pageTitle={data.mdx.frontmatter.title}>
       <p>{data.mdx.frontmatter.date}</p>
-      <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
+      <div className="rounded-xl overflow-hidden  my-10 size-2/3 mx-auto">
+        <GatsbyImage
+          className=""
+          image={image}
+          alt={data.mdx.frontmatter.hero_image_alt}
+        />
+      </div>
       {children}
     </Layout>
   );
