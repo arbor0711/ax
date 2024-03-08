@@ -1,5 +1,6 @@
 import * as React from "react";
 import NavBar from "./navBar";
+import Footer from "./footer";
 
 interface Props {
   pageTitle: string;
@@ -14,6 +15,7 @@ const Layout: React.FC<Props> = ({ pageTitle, children }) => {
         <h1 className="">{pageTitle}</h1>
         {children}
       </main>
+      <Footer />
     </div>
   );
 };
