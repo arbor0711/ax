@@ -1,24 +1,56 @@
-import { type PageProps } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import { Link, graphql, type PageProps } from "gatsby";
 import * as React from "react";
 import HeroImage from "../components/heroImage";
 import Layout from "../components/layout";
-import Seo from "../components/seo";
 import Padding from "../components/padding";
+import Posts from "../components/posts";
+import Seo from "../components/seo";
+import Portfolio from "../components/portfolio";
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage: React.FC<PageProps> = ({ data }) => {
   return (
     <Layout>
       <HeroImage />
       <Padding>
         <main>
-          <h1>Welcome to AX</h1>
-          <p>A place for sharing my answers to your questions</p>
-          <StaticImage
-            className="ima"
-            alt="Gatsby Image"
-            src="../images/logo-dark.png"
-          />
+          <section className="flex flex-col lg:flex-row gap-10 my-10">
+            <article className="p-10 lg:w-1/2">
+              <h1> Welcome and thanks for stopping by.</h1>
+              <p>
+                I hope you enjoy exploring this site as much as I've enjoyed
+                building it. While you're here, you can check out my blog posts
+                and courses, see my talks and interviews, learn more about me,
+                or get in touch.
+              </p>
+            </article>
+            <div className="p-10 lg:w-1/2 border rounded-lg">
+              <span className="mb-10">ABOUT ME</span>
+              <h1>
+                I develop and design websites with{" "}
+                <span className="text-primary">purpose.</span>
+              </h1>
+              <p>
+                I'm a full stack software engineer with a focus on frontend
+                development. I also write and speak about web development,
+                JavaScript, and technology.
+              </p>
+              <div className="flex gap-5 my-10">
+                <Link className="btn btn-primary" to="/">
+                  ABOUT ME
+                </Link>
+                <Link className="btn btn-primary" to="/">
+                  MY PROFILE
+                </Link>
+              </div>
+            </div>
+          </section>
+          <section className="bg-bermuda my-10 py-10 flex flex-col justify-center">
+            <h2 className="mb-10 text-center">Latest Posts</h2>
+            <Posts data={data} />
+            <Link to="/blog" className="btn btn-primary m-auto my-10">
+              All Posts
+            </Link>
+          </section>
         </main>
       </Padding>
     </Layout>
@@ -28,3 +60,19 @@ const IndexPage: React.FC<PageProps> = () => {
 export default IndexPage;
 
 export const Head = () => <Seo title="Home Page" />;
+
+export const postsQuery = graphql`
+  query {
+    allMdx(sort: { frontmatter: { date: DESC } }) {
+      nodes {
+        frontmatter {
+          date(formatString: "MMMM D, YYYY")
+          title
+          slug
+        }
+        id
+        excerpt
+      }
+    }
+  }
+`;
