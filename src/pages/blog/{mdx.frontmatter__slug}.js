@@ -3,20 +3,23 @@ import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
+import Padding from "../../components/padding";
 
 const BlogPost = ({ data, children }) => {
   const image = getImage(data.mdx.frontmatter.hero_image);
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <p>{data.mdx.frontmatter.date}</p>
-      <div className="rounded-xl overflow-hidden  my-10 size-2/3 mx-auto">
-        <GatsbyImage
-          className=""
-          image={image}
-          alt={data.mdx.frontmatter.hero_image_alt}
-        />
-      </div>
-      {children}
+      <Padding>
+        <p>{data.mdx.frontmatter.date}</p>
+        <div className="rounded-xl overflow-hidden  my-10 size-2/3 mx-auto">
+          <GatsbyImage
+            className=""
+            image={image}
+            alt={data.mdx.frontmatter.hero_image_alt}
+          />
+        </div>
+        {children}
+      </Padding>
     </Layout>
   );
 };
