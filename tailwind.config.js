@@ -27,7 +27,40 @@ module.exports = {
       // "bubble-gum": "#ff77e9",
       bermuda: "#000",
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        blink: {
+          "0%": { display: "none" },
+          "50%": { display: "none" },
+          "100%": { display: "inline" },
+        },
+        wave: {
+          "0%": { transform: "rotate(0.0deg)" },
+          "10%": { transform: "rotate(14deg)" },
+          "20%": { transform: "rotate(-8deg)" },
+          "30%": { transform: "rotate(14deg)" },
+          "40%": { transform: "rotate(-4deg)" },
+          "50%": { transform: "rotate(10.0deg)" },
+          "60%": { transform: "rotate(0.0deg)" },
+          "100%": { transform: "rotate(0.0deg)" },
+        },
+        text: {
+          "0%, 100%": {
+            "background-size": "200% 200%",
+            "background-position": "left center",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right center",
+          },
+        },
+      },
+      animation: {
+        "waving-hand": "wave 2s linear infinite",
+        "colorful-text": "text 3s ease infinite",
+        "blinking-text": "blink 1.2s linear infinite",
+      },
+    },
   },
   plugins: [require("daisyui")],
 };
