@@ -2,10 +2,7 @@ import React from "react";
 
 const HeroImage = () => {
   return (
-    <header
-      className="bg-[url('../images/header.gif')] h-96 flex flex-col justify-center "
-      // style="background-image: url('assets/images/header.gif');"
-    >
+    <header className="bg-[url('../images/header.gif')] h-96 flex flex-col justify-center ">
       <h1 className="text-5xl mx-auto text-bermuda leading-tight">
         <span className="flex">
           Hello<span className="text-[rgb(255,64,64)]">There</span>({" "}
