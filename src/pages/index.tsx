@@ -6,11 +6,13 @@ import Padding from "../components/padding";
 import Posts from "../components/posts";
 import Seo from "../components/seo";
 import Portfolio from "../components/portfolio";
+import ProjectCard from "../components/projectCard";
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
   return (
     <Layout>
       <HeroImage />
+
       <Padding>
         <main>
           <section className="flex flex-col lg:flex-row gap-10 my-10">
@@ -44,12 +46,31 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
               </div>
             </div>
           </section>
+
           <section className="bg-bermuda my-10 py-10 flex flex-col justify-center">
             <h2 className="mb-10 text-center">Latest Posts</h2>
             <Posts data={data} />
             <Link to="/blog" className="btn btn-primary m-auto my-10">
               All Posts
             </Link>
+          </section>
+
+          <section className="h-64 flex justify-center m-auto">
+            <p className="font-extrabold text-7xl m-auto">AWESOME ANIMATION</p>
+          </section>
+
+          <section className="mb-10">
+            <span className="">---Portfolio</span>
+            <div className="my-20 flex flex-col md:flex-row gap-5 justify-center">
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+            </div>
+            <div className="text-center">
+              <Link to="/" className="btn btn-primary btn-wide ">
+                See All
+              </Link>
+            </div>
           </section>
         </main>
       </Padding>
