@@ -14,8 +14,15 @@
 body {
   color: rgb(179, 179, 179);
 }
+::-moz-selection {
+  /* Code for Firefox */
+  color: red;
+  background: yellow;
+}
+
 ::selection {
-  background: red;
+  color: red;
+  background: yellow;
 }
 
 /* By default when we use Tailwind our element are unstyled. On the top I have 3 directives(baxshname-rahnama) to import 3 layers in tailwind
