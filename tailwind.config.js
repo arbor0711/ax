@@ -4,30 +4,47 @@ module.exports = {
     `./src/pages/**/*.{js,jsx,ts,tsx}`,
     `./src/components/**/*.{js,jsx,ts,tsx}`,
   ],
+  darkMode: "class",
   theme: {
     colors: {
-      // transparent: "transparent",
-      // current: "currentColor",
-      // // use default color
-      // white: colors.white,
-      // purple: "#3f3cbb",
-      // // color object syntax
-      // tahiti: {
-      //   100: "#cffafe",
-      //   200: "#a5f3fc",
-      //   300: "#67e8f9",
-      //   400: "#22d3ee",
-      //   500: "#06b6d4",
-      //   600: "#0891b2",
-      //   700: "#0e7490",
-      //   800: "#155e75",
-      //   900: "#164e63",
-      // },
-      // silver: "#ecebff",
-      // "bubble-gum": "#ff77e9",
-      bermuda: "#000",
+      transparent: "transparent",
+      black: "#000",
+      white: "#fff",
+      gray: {
+        100: "#f7fafc",
+        400: "#ced4da",
+        900: "#1a202c",
+      },
+      navy: "#14213d",
+      caterpillar: "#fca311",
+      headings: "#1c1c1c",
+      texty: "#262626",
+      bg_dark: "#14213d",
+      bg_light: "#e5e5e5",
     },
     extend: {
+      fontSize: {
+        h1: "calc(1.625rem + 1.6vw)",
+        h2: "calc(1.5rem + .25vw)",
+        h3: "calc(1.125rem + .25vw)",
+        h4: "calc(1.5rem + .25vw)",
+        texts: "calc(.35842vw + .95296em)",
+      },
+
+      spacing: {
+        h1t: "1.5rem",
+        h1b: "0.67rem",
+        h2t: "1.5rem",
+        h2b: "0.67rem",
+        h3t: "1rem",
+        h3b: "0.67rem",
+        h4t: "0.67rem",
+        h4b: "0.67rem",
+        section: "15rem",
+      },
+      borderRadius: {
+        round: "2rem",
+      },
       keyframes: {
         blink: {
           "0%": { display: "none" },
