@@ -7,6 +7,7 @@ import Posts from "../components/posts";
 import Seo from "../components/seo";
 import Portfolio from "../components/portfolio";
 import ProjectCard from "../components/projectCard";
+import DividerLine from "../components/dividerLine";
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
   return (
@@ -26,6 +27,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
               </p>
             </article>
             <div className="p-10 lg:w-1/2 border rounded-lg">
+              <DividerLine />
               <span className="mb-10">ABOUT ME</span>
               <h1>
                 I develop and design websites with{" "}
