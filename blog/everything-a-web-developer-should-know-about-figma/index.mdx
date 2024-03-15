@@ -1,0 +1,95 @@
+---
+title: "Everything a Web Developer Should Know About Figma"
+date: "2022-12-06"
+slug: "everything-a-web-developer-should-know-about-figma"
+hero_image: "./figma.jpg"
+hero_image_alt: "Happy developer with figma background"
+hero_image_credit_text: "Alireza Keshavarz Shirazi"
+hero_image_credit_link: "https://devscoops.com"
+---
+
+In the development arena, effective collaboration is essential, and understanding each other's roles is key. While front-end developers often focus solely on code, appreciating the design process is crucial for success and growth. In the past dominated by Photoshop and Sketch, cumbersome workflows were common due to tool constraints. However, Figma emerged as a game-changer, offering real-time collaboration and seamless integration between designers and developers.
+Today, Figma has become an essential tool, empowering design teams to create exceptional digital experiences efficiently and collaboratively. That's why I want to shed light on the world of design and all the little secrets of Figma that you might not be familiar with.
+
+## Components and Variants
+
+Figma supports the creation and usage of components, much like many other frontend libraries and frameworks. In Figma, you can create components by selecting the elements you want to include in the component and then right-clicking to choose "Create Component" or by using the shortcut Cmd/Ctrl + Alt + K. Once created, you can reuse these components across different frames, pages, or even files.
+The beauty of using components in Figma lies in their versatility and consistency. Any changes made to a component will automatically reflect wherever that component is used throughout your designs. This makes it easy to maintain a consistent design system and quickly iterate on your designs.
+Furthermore, Figma allows you to nest components within other components, enabling you to create complex design systems with reusable building blocks. This approach streamlines the design process and enhances collaboration, as team members can easily access and utilize the same components across different projects. Moreover, allow us to implement atomic design patterns effectively.
+We also have Variants called a component set that contains different variants of a component. We can easily switch between these variants throughout our design using the Properties panel. This way, we have all the different states of a component in one place for documentation.
+
+TIP: A Quick Way to Change the Whole Component! If you need
+something in Figma to change the entire appearance of a component, for example,
+light/dark mode, you can use a true/false or yes/no property. By doing this, you
+create an instant toggle for the entire component! I saw this trick in the
+fantastic iOS 16 UI kit for Figma designed by Joey Banks. It was the best file
+settings I've seen so far! Currently, we have attractive features like text,
+swapping, and on/off. And well, you can combine all these to do more work.
+
+### Local and External Libraries
+
+Just as we can store reusable parts locally in code or create external libraries, Figma also provides this possibility for components and styles.
+With this, we can use components in several Figma files while maintaining a reliable central reference and organized structure.
+
+### Syncing UI Components and Code: A Team Game!
+
+With the advent of components, variants, and properties in the design world, it's possible to achieve more precise synchronization between user interface (UI) components and code components. But to achieve this synchronization, we need information exchange. So, let's get together, have a coffee, and tell us about the structure, naming, functionality, and any details we need.
+Fortunately, there are many resources like videos and tutorials for getting inspired by various synchronization methods of other teams. I'm giving you a preliminary guide; discover the rest of the path yourself.
+
+Synchronizing components with code can be fantastic, but one thing should not be forgotten: it requires effort and, more importantly, constant updating. So it's better to use it only in suitable conditions, such as in a comprehensive design system.
+If you're designing a single-page website, you can still use components. This ensures clean and scalable design and provides a clear structure for coding. But it's not necessarily essential for these components to be fully synchronized with the code.
+For example, nobody thinks about starting a cake factory production line just to bake a birthday cake for their friend! But they still use the same basic ingredients.
+In other words, you can take advantage of components for better organization and a clean structure without always needing to go through a complete synchronization process with the code. The key is to understand when and where the use of this feature is logical and useful.
+
+## Working with Styles in Figma
+
+In Figma, we can create styles for color, text, grids, shadows, blur, and similar things and apply them throughout the design. However, unfortunately, it doesn't have many other capabilities.
+Figma doesn't provide automatic documentation for styles, but that doesn't mean design teams neglect documentation. Typically, teams adopt several approaches to maintain coherence and coordination:
+
+Internal Documentation: They directly write explanations related to each style and how to use it within the same Figma file alongside the style itself.
+Separate File: They allocate a separate file to record and explain all styles and project design rules.
+Link to External Styles: Similar to what we do with components, they can link to styles defined in another file.
+Opportunities for Connection between Design and Code: Figma Tokens Plugin
+
+Problem: Figma styles are somewhat limited and cannot interact with each other. For example, you cannot set a font size that scales and automatically change the scaling rate. You can only set a fixed size. Also, currently, we don't have spacing styles.
+
+Solution: The Figma Tokens plugin allows you to create various tokens in Figma and work with them. You can even connect these tokens to code tokens and synchronize them.
+
+## Launching and Testing Responsive Design
+
+Responsive design means ensuring the proper and efficient display of a website or application on any type of screen and device. Figma has powerful tools that can accompany us on this journey. Let's get acquainted with them step by step:
+
+### Figma Tools for Responsive Design:
+
+1. Auto Layout: This feature allows you to arrange elements in a way that automatically adjusts their size and position with changes in screen size. For example, you can place multiple buttons next to each other, which will stack vertically as the screen size decreases.
+   Auto Layout in Figma is an excellent tool for responsive designs, but it requires practice and a bit of patience to get used to. Don't worry; it becomes very useful over time! Auto Layout somewhat works similarly to Flexbox, which you can understand by looking at the Inspect panel.
+
+With Auto Layout, you can:
+
+- Space between items: Set positive space to create gaps or negative space to align items next to each other.
+- Separate padding for each side: Control the empty space around each item individually.
+- Alignment: Align items relative to each other (left, right, center, etc.).
+- Child state: "Compact" mode (like a navigation menu) or "spaced" mode to control the amount of space between items.
+- Resize behavior: Define how the element's size changes with the frame (fill frame, adapt to content, or fixed size).
+- Nesting Auto Layouts: Create professional components or even entire pages by combining multiple Auto Layouts.
+- Relative position elements: Add elements with relative positions inside an Auto Layout frame (new feature).
+- Automatic adaptation to new content: With the addition of new content, the layout adjusts automatically while preserving other settings.
+  TIP: A crucial point that developers should know is that
+  Figma does not have automatic breakpoints (I'll talk a bit more about how to
+  deal with this issue later).
+
+2. Constraints: Using constraints, you can define the relative position of elements concerning each other or the edges of the screen. This ensures that your design remains organized and proportionate even with changes in screen size.
+   Constraints are another way to arrange and organize elements in Figma, which is simpler than Auto Layout. With constraints, you can define an element's position relative to the main (parent) frame. In this case, the element's position changes with the frame's size, but not with its content.
+
+An important note: You cannot use Auto Layout and Constraints simultaneously within a frame. You have to choose one. (There is a small exception for elements with relative positions inside Auto Layout). There is no better or worse between these two methods; it all depends on the type of design and your needs. 3. Grid System: The grid helps you align and organize elements on the screen. With the grid, you can create consistent spacing between elements and maintain uniform columns and rows.
+Using the grid system, you can add order and structure to your designs in Figma. The grid helps you neatly align elements next to each other and precisely control the spacing between them.
+
+4. Combining Grid and Constraints: An Exciting Solution for Responsiveness
+
+One cool feature of using the grid in a frame is that when you use constraints, the grid columns are considered as the parent frame. By combining the grid and constraints, we can easily implement incredibly responsive designs (compatible with different screen sizes).
+
+Alright, alright.
+
+This concludes this beloved notebook.
+
+This is the end of Part One :)
