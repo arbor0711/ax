@@ -1,25 +1,34 @@
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
+import { IoCloseSharp } from "react-icons/io5";
+
 interface Props {
   toggleMode: () => void;
 }
 const NavBar = ({ toggleMode }: Props) => {
   return (
-    <nav className="bg-gray-800 py-4 bg-transparent">
+    <nav
+      className="
+                    bg-navy text-bg_light py-3 mx-auto
+                    w-11/12 sticky top-0 z-10 rounded-b-3xl 
+                    "
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <div className="flex items-center">
+          {/* devscoops logo */}
+          <div className=" items-center hidden md:flex">
             <Link to="/" className="text-white text-xl font-bold">
               <StaticImage
                 className=""
                 alt="Gatsby Image"
                 src="../images/logo-dark.png"
-                width={150}
+                width={100}
               />
             </Link>
           </div>
-          <div className="hidden md:block">
+          {/* menu links */}
+          <div className="items-center hidden md:flex ">
             <Link to="/" className="text-gray-300 hover:text-white px-3 py-2">
               Home
             </Link>
@@ -36,6 +45,60 @@ const NavBar = ({ toggleMode }: Props) => {
               Blog
             </Link>
           </div>
+
+          {/* toggler */}
+
+          <div className="flex md:hidden">
+            <div className="drawer">
+              <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+              <div className="drawer-content">
+                {/* Page content here */}
+                <label
+                  htmlFor="my-drawer"
+                  className="btn btn-ghost drawer-button"
+                >
+                  <StaticImage
+                    src="../images/toggler-btn.png"
+                    alt="menu dropdown button"
+                    className="w-6 object-scale-down	"
+                  />
+                </label>
+              </div>
+              <div className="drawer-side">
+                <label
+                  htmlFor="my-drawer"
+                  aria-label="close sidebar"
+                  className="drawer-overlay"
+                ></label>
+                <ul className="menu px-4 py-10 pb-15 w-60 min-h-full bg-base-200 text-base-content justify-between">
+                  {/* Sidebar content here */}
+
+                  <div>
+                    <li className="border-b-2 border-b-caterpillar py-2">
+                      <Link to="/">HOME</Link>
+                    </li>
+                    <li className="border-b-2 border-b-caterpillar py-2">
+                      <Link to="/blog">BLOG</Link>
+                    </li>
+                    <li className="border-b-2 border-b-caterpillar py-2">
+                      <Link to="/about">ABOUT</Link>
+                    </li>
+                  </div>
+                  {/* close button */}
+                  <button
+                    className="btn btn-circle btn-outline mx-auto border-caterpillar border-2 "
+                    onClick={() => {
+                      document.getElementById("my-drawer")!.click();
+                    }}
+                  >
+                    <IoCloseSharp />
+                  </button>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* dark mode */}
           <label className="swap swap-rotate">
             {/* this hidden checkbox controls the state */}
             <input
@@ -47,7 +110,8 @@ const NavBar = ({ toggleMode }: Props) => {
 
             {/* sun icon */}
             <svg
-              className="swap-off fill-current w-10 h-10"
+              color="#fec800"
+              className="swap-off fill-current w-6 h-6 "
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -56,7 +120,8 @@ const NavBar = ({ toggleMode }: Props) => {
 
             {/* moon icon */}
             <svg
-              className="swap-on fill-current w-10 h-10"
+              color="lightblue"
+              className="swap-on fill-current w-5 h-5"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
