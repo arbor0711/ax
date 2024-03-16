@@ -7,6 +7,7 @@ import Padding from "../../components/padding";
 
 const BlogPost = ({ data, children }) => {
   const image = getImage(data.mdx.frontmatter.hero_image);
+  console.log(image);
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <Padding>

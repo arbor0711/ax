@@ -1,8 +1,8 @@
 import React from "react";
-import Portfolio from "../components/portfolio";
+import PostCard from "./../components/postCard";
 
 const test = () => {
-  return <Portfolio />;
+  return <PostCard />;
 };
 
 export default test;
