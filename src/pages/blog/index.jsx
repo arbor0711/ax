@@ -29,6 +29,14 @@ export const postsQuery = graphql`
           date(formatString: "MMMM D, YYYY")
           title
           slug
+          hero_image_alt
+          hero_image_credit_link
+          hero_image_credit_text
+          hero_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         id
         excerpt

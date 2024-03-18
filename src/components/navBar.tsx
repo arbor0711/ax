@@ -4,7 +4,7 @@ import React from "react";
 import { IoCloseSharp } from "react-icons/io5";
 
 interface Props {
-  toggleMode: () => void;
+  toggleMode?: () => void;
 }
 const NavBar = ({ toggleMode }: Props) => {
   return (

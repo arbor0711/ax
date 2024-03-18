@@ -1,8 +1,7 @@
 import React from "react";
-import PostCard from "../components/blogPostCard";
 
 const test = () => {
-  return <PostCard />;
+  return <></>;
 };
 
 export default test;
