@@ -8,6 +8,7 @@ import Seo from "../components/seo";
 import Portfolio from "../components/portfolio";
 import ProjectCard from "../components/projectCard";
 import DividerLine from "../components/dividerLine";
+import AwesomeWebsites from "./../components/awesomeWebsites";
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
   return (
@@ -58,7 +59,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
           </section>
 
           <section className="h-64 flex justify-center m-auto">
-            <p className="font-extrabold text-7xl m-auto">AWESOME ANIMATION</p>
+            <AwesomeWebsites />
           </section>
 
           <section className="mb-10">

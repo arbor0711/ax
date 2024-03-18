@@ -19,8 +19,8 @@ module.exports = {
       caterpillar: "#fca311",
       headings: "#1c1c1c",
       texty: "#262626",
-      bg_dark: "#14213d",
-      bg_light: "#e5e5e5",
+      bg_dark: "#000",
+      bg_light: "#fff",
     },
     extend: {
       fontSize: {

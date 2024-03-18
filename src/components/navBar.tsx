@@ -10,7 +10,7 @@ const NavBar = ({ toggleMode }: Props) => {
   return (
     <nav
       className="
-                    bg-navy text-bg_light py-3 mx-auto
+                    bg-navy text-bg_light dark:bg-texty py-3 mx-auto
                     w-11/12 sticky top-0 z-10 rounded-b-3xl 
                     "
     >

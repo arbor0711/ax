@@ -14,18 +14,18 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
 
   plugins: [
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "src/images/favicon.png",
-      },
-    },
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/images/favicon.png",
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

@@ -27,6 +27,7 @@ Here's another post! It's even better than the first one!
 This is bold: **Bold Text with wrapping in two stars**
 
 This is a link: [Next.js](https://nextjs.org/)
+This is a gif image: ![otter dancing with a fish](../../images/dancing-otter.gif)
 
 > > *Let me know about the funeral etc do not know his family at all.*44\* Oranges
 
