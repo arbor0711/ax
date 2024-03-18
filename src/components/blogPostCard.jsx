@@ -2,7 +2,7 @@ import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
 
-const PostCard = ({ node }) => {
+const BlogPostCard = ({ node }) => {
   const image = getImage(node.frontmatter.hero_image);
   console.log(image);
   return (
@@ -25,7 +25,7 @@ const PostCard = ({ node }) => {
   );
 };
 
-export default PostCard;
+export default BlogPostCard;
 
 export const query = graphql`
   query ($id: String) {
