@@ -8,7 +8,7 @@ interface Props {
 }
 const NavBar = ({ toggleMode }: Props) => {
   // scrolling navbar
-  const [scrollUp, setScrollUp] = useState(false);
+  const [scrollUp, setScrollUp] = useState(true);
 
   useEffect(() => {
     const threshold = 0;
