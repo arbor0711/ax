@@ -4,13 +4,11 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 
 const PrivacyPolicy = () => {
   return (
-    <main className="bg-white px-24 py-16 text-black relative">
+    <main className="bg-white px-10 md:px-24 py-16 text-texty relative">
       <section className="mb-20">
         <div className="mb-10">
-          <h1 className="text-6xl">Privacy Policy</h1>
-          <i className="text-yellow-500 text-base">
-            Effective date: Jun 01, 2021
-          </i>
+          <h1 className="text-h1 text-headings">Privacy Policy</h1>
+          <i className="text-xs ">Effective date: Jun 01, 2021</i>
         </div>
         <p>
           At Devscoops, accessible from{" "}
@@ -23,20 +21,20 @@ const PrivacyPolicy = () => {
           note that this policy does not apply to any information collected
           offline or through channels other than this website.
         </p>
-        <h2>Consent</h2>
+        <h2 className="text-h2 text-headings">Consent</h2>
         <p>
           By using our website, you hereby consent to our Privacy Policy and
           agree to its terms. For our Terms and Conditions, please visit the
           Terms & Conditions page.
         </p>
-        <h2>Information We Collect</h2>
+        <h2 className="text-h2 text-headings">Information We Collect</h2>
         <p>
           We may collect personal information that you voluntarily provide to
           us, such as your name, email address, phone number, and any other
           information you choose to provide when contacting us or interacting
           with our website.
         </p>
-        <h2>How We Use Your Information</h2>
+        <h2 className="text-h2 text-headings">How We Use Your Information</h2>
         We may use the information we collect for various purposes, including:
         <li>Providing, operating, and maintaining our website.</li>
         <li>Improving, personalizing, and expanding our website.</li>
@@ -47,7 +45,7 @@ const PrivacyPolicy = () => {
           purposes.
         </li>
         <li>Preventing fraud.</li>
-        <h2>Log Files</h2>
+        <h2 className="text-h2 text-headings">Log Files</h2>
         <p>
           Devscoops follows standard procedures for using log files. These files
           log visitors when they visit websites. The information collected may
@@ -57,16 +55,16 @@ const PrivacyPolicy = () => {
           analyzing trends, administering the site, tracking users' movements on
           the website, and gathering demographic information.
         </p>
-        <h2>Contact Us</h2>
+        <h2 className="text-h2 text-headings">Contact Us</h2>
         <p>
           If you have additional questions or require more information about our
-          Privacy Policy, please contact us by email: hello@devscoops.com
+          Privacy Policy, please contact us by email: hi@devscoops.com
         </p>
       </section>
       <div className="fixed bottom-10  right-10 ">
         <Link
           to="/"
-          className=" btn  btn-xs sm:btn-sm md:btn-md text-white bg-gray-900 hover:text-yellow-400"
+          className=" btn btn-md text-white bg-navy hover:text-caterpillar hover:bg-navy"
         >
           <AiOutlineArrowLeft style={{ fontSize: "20px" }} />
           Home

@@ -59,18 +59,21 @@ const NavBar = ({ toggleMode }: Props) => {
           </div>
           {/* menu links */}
           <div className="items-center hidden md:flex ">
-            <Link to="/" className="text-gray-300 hover:text-white px-3 py-2">
+            <Link
+              to="/"
+              className="text-gray-300 hover:text-white px-3 py-2 link-hover"
+            >
               Home
             </Link>
             <Link
               to="/about"
-              className="text-gray-300 hover:text-white px-3 py-2"
+              className="text-gray-300 hover:text-white px-3 py-2 link-hover"
             >
               About
             </Link>
             <Link
               to="/blog"
-              className="text-gray-300 hover:text-white px-3 py-2"
+              className="text-gray-300 hover:text-white px-3 py-2 link-hover"
             >
               Blog
             </Link>
