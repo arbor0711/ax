@@ -21,8 +21,12 @@ module.exports = {
       texty: "#262626",
       bg_dark: "#000",
       bg_light: "#fff",
+      box_shadow: "#E00E94",
     },
     extend: {
+      boxShadow: {
+        navbar: "10px 10px 10px -15px rgb(255, 255, 255)",
+      },
       fontSize: {
         h1: "calc(1.625rem + 1.6vw)",
         h2: "calc(1.5rem + .25vw)",

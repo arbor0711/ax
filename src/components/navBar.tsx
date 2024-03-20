@@ -1,4 +1,3 @@
-import { TIMEOUT } from "dns";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useEffect, useState } from "react";
@@ -41,10 +40,9 @@ const NavBar = ({ toggleMode }: Props) => {
   }, [scrollUp]);
   return (
     <nav
-      id="navbar"
-      className={`bg-navy text-bg_light py-3 mx-auto w-11/12 sticky top-0 z-10 rounded-b-3xl ${
+      className={` bg-navy text-bg_light py-3 mx-auto w-11/12 sticky top-0 z-10 rounded-b-3xl ${
         scrollUp ? "translate-y-0" : "-translate-y-full"
-      } transition-transform duration-300 ease-in-out`}
+      } transition-transform duration-300 ease-in-out z-50 shadow-navbar`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
