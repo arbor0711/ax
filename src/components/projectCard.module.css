@@ -1,0 +1,8 @@
+.details {
+  transform: perspective(2000px) rotateY(-90deg);
+  transition-duration: 0.7s;
+}
+.card:hover .details {
+  transform: perspective(2000px) rotateY(0deg);
+  transition-duration: 0.7s;
+}

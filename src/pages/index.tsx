@@ -65,9 +65,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
           <section className="mb-10">
             <span className="">---Portfolio</span>
             <div className="my-20 flex flex-col md:flex-row gap-5 justify-center">
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
+              {/* project card */}
             </div>
             <div className="text-center">
               <Link to="/" className="btn btn-primary btn-wide ">
