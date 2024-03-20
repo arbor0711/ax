@@ -11,3 +11,6 @@ https://daisyui.com/components/drawer/
 
 drawer close btn:
 https://stackoverflow.com/questions/69941166/how-to-close-daisyui-drawer-menu-with-just-one-click
+
+Scroll direction
+https://stackoverflow.com/questions/62497110/detect-scroll-direction-in-react-js

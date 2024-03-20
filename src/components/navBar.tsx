@@ -1,18 +1,50 @@
+import { TIMEOUT } from "dns";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 
 interface Props {
   toggleMode?: () => void;
 }
 const NavBar = ({ toggleMode }: Props) => {
+  // scrolling navbar
+  const [scrollUp, setScrollUp] = useState(false);
+
+  useEffect(() => {
+    const threshold = 0;
+    let lastScrollY = window.pageYOffset;
+    let ticking = false;
+
+    const updateScrollUp = () => {
+      const scrollY = window.pageYOffset;
+
+      if (Math.abs(scrollY - lastScrollY) < threshold) {
+        ticking = false;
+        return;
+      }
+      setScrollUp(scrollY > lastScrollY ? false : true);
+      lastScrollY = scrollY > 0 ? scrollY : 0;
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateScrollUp);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [scrollUp]);
   return (
     <nav
-      className="
-                    bg-navy text-bg_light dark:bg-texty py-3 mx-auto
-                    w-11/12 sticky top-0 z-10 rounded-b-3xl 
-                    "
+      id="navbar"
+      className={`bg-navy text-bg_light py-3 mx-auto w-11/12 sticky top-0 z-10 rounded-b-3xl ${
+        scrollUp ? "translate-y-0" : "-translate-y-full"
+      } transition-transform duration-300 ease-in-out`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
