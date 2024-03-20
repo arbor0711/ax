@@ -4,7 +4,9 @@ import React from "react";
 
 const ProjectCard = () => {
   return (
-    <div className={`${card} relative w-72 h-72 bg-navy overflow-hidden group`}>
+    <div
+      className={`${card} relative w-72 h-72 bg-navy overflow-hidden group rounded-2xl`}
+    >
       <div className="">
         <img
           className="group-hover:translate-x-1/3 transition duration-700"
