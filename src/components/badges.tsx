@@ -6,7 +6,7 @@ const Badges = ({ badges }: { badges: string[] }) => {
       {badges.map((badge) => (
         <div
           key={badge}
-          className="badge badge-ghost text-texty dark:text-gray-400 badge-outline m-1"
+          className="badge  text-texty dark:text-gray-400 badge-outline m-1"
         >
           {badge}
         </div>

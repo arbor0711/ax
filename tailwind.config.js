@@ -24,6 +24,7 @@ module.exports = {
       box_shadow: "#E00E94",
       button_Primary: "#a91079",
       button_primary_hover: "#a91079e2",
+      bg_bar: "#191E24",
     },
     extend: {
       boxShadow: {

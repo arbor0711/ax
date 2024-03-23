@@ -40,7 +40,7 @@ const NavBar = ({ toggleMode }: Props) => {
   }, [scrollUp]);
   return (
     <nav
-      className={` bg-navy text-bg_light py-3 mx-auto w-11/12 sticky top-0 z-10 rounded-b-3xl ${
+      className={` bg-bg_bar text-bg_light py-3 mx-auto w-11/12 sticky top-0 z-10 rounded-b-3xl ${
         scrollUp ? "translate-y-0" : "-translate-y-full"
       } transition-transform duration-300 ease-in-out z-50 shadow-navbar`}
     >
