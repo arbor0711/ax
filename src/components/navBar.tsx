@@ -77,6 +77,12 @@ const NavBar = ({ toggleMode }: Props) => {
             >
               Blog
             </Link>
+            <Link
+              to="/contact"
+              className="text-gray-300 hover:text-white px-3 py-2 link-hover"
+            >
+              Contact
+            </Link>
           </div>
 
           {/* toggler */}

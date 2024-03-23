@@ -14,12 +14,12 @@ const AwesomeWebsites = () => {
         className="mb-0 "
       >
         AWESOME
-        {/* <img
+        <img
           src={webapp}
           alt="Otter dancing with a fish"
           width={150}
           className="inline"
-        /> */}
+        />
       </h4>
       <span
         style={{ fontSize: "10vw", lineHeight: "0.75", marginBottom: "100vh" }}

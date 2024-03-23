@@ -1,14 +1,13 @@
-import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
-import { toolkit } from "../data/data";
-import Toolkit from "../components/toolkit";
-import { Link, graphql, useStaticQuery } from "gatsby";
-import resume from "../data/resume.pdf";
+import { StaticImage } from "gatsby-plugin-image";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { MdNextPlan } from "react-icons/md";
+import Layout from "../components/layout";
 import Padding from "../components/padding";
+import Seo from "../components/seo";
+import Toolkit from "../components/toolkit";
+import { toolkit } from "../data/data";
+import resume from "../data/resume.pdf";
 
 const AboutPage = () => {
   const [page, setPage] = React.useState(1);
