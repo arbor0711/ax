@@ -30,4 +30,7 @@ https://blog.theashishmaurya.me/validating-your-react-forms-with-zod-and-no-hook
 Fix bug:request.formData() isn't typed for Object.fromEntries()
 https://github.com/BuilderIO/qwik/pull/1371/commits/2cbbe45eadb071494303de3550b589175577af2c
 =======
->>>>>>> 37a9690b7f61a9c1c9db4df3dec1b7c99c62e409
+
+> > > > > > > 37a9690b7f61a9c1c9db4df3dec1b7c99c62e409
+> > > > > > > how to pass react icons as props
+> > > > > > > https://stackoverflow.com/questions/70124026/how-to-pass-an-icon-as-a-prop

@@ -1,9 +1,14 @@
-import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import * as React from "react";
 import { FaCloudDownloadAlt } from "react-icons/fa";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { GrProjects } from "react-icons/gr";
 import { MdNextPlan } from "react-icons/md";
+
+import ButtonLink from "../components/buttonLink";
 import Layout from "../components/layout";
 import Padding from "../components/padding";
+import ProjectCard from "../components/projectCard";
 import Seo from "../components/seo";
 import Toolkit from "../components/toolkit";
 import { toolkit } from "../data/data";
@@ -16,25 +21,48 @@ const AboutPage = () => {
     <Layout pageTitle="About Me">
       <Padding>
         <main>
-          <section className="flex ">
-            <div className="w-2/3">
+          <section className="flex flex-col items-center md:flex-row md:justify-between px-10">
+            <div className="w-full md:w-2/4">
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. In
-                laudantium harum eligendi repudiandae, sint illo, id ut odio
-                repellat praesentium officiis doloremque accusantium blanditiis
-                eum. Doloribus cupiditate nobis temporibus maiores!
+                Hi. I am Alireza, a curious <strong>Frontend Engineer</strong>{" "}
+                with a deep sense of ownership, driving me to go the extra mile
+                in every project to ensure that every detail of the product
+                backlog leads to outstanding sprint results. My proficiency in
+                Next.js, React, and TypeScript enables me to take innovative
+                approaches to achieve notable performance.
+                <br />
+                With over <strong>7 years</strong> of experience in frontend
+                development and product design, I consistently promote the use
+                of the newest technologies and strive to elevate standards in
+                web accessibility and usability. I am a team player who
+                collaborates effectively with cross-functional teams,
+                appreciates knowledge sharing, and values continuous growth for
+                all team members.
+                <br />
+                As a technology and gaming enthusiast, I believe I can deliver
+                high-quality solutions that consistently meet and exceed project
+                goals. My background in creating and implementing unit and
+                integration tests ensures software reliability, and a strong
+                proficiency in TypeScript enhances code quality and
+                maintainability.
               </p>
+              <ButtonLink
+                href="/contact"
+                label="Lets Work Together"
+                iconAfter={<FaArrowRightLong color="#FFC700" />}
+              />
             </div>
+
             <StaticImage
-              className="float-right m-5 w-1/2 size-fit rounded-full"
+              className="float-right m-5  w-2/3 md:w-1/3 size-fit rounded-full"
               alt="Gatsby Image"
               src="../images/aboutMe.jpg"
             />
           </section>
 
-          <section className="text-center my-28">
-            <h2 className="mb-10">Tech Skills</h2>
-            <div className="flex  text-center flex-wrap justify-center">
+          <section className="text-center my-10">
+            <h2 className="text-h2 mt-h2t mb-h2b">Tech Skills</h2>
+            <div className="flex  text-center flex-wrap justify-center ">
               {toolkit.map((skillSet) => (
                 <div key={skillSet.segment} className=" m-5">
                   <Toolkit skillSet={skillSet} />
@@ -43,15 +71,31 @@ const AboutPage = () => {
             </div>
           </section>
 
+          <section className="text-center my-10">
+            <h2 className="text-h2 mt-h2t mb-h2b">Portfolio</h2>
+            <div className="flex flex-col md:flex-row justify-center items-center mb-5 gap-10">
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+            </div>
+            <ButtonLink
+              href="/portfolio"
+              label="See All Projects"
+              iconAfter={<GrProjects color="#FFC700" />}
+            />
+          </section>
+
           <section className="text-center flex flex-col">
-            <h2>Resume</h2>
+            <h2 className="text-h2 mt-h2t mb-h2b">Resume</h2>
 
             <a
-              className="btn btn-ghost mb-5"
+              className="group btn  mb-5 "
               href={resume}
               download="Alireza-Keshavarz-Shirazi-CV"
             >
-              <FaCloudDownloadAlt color="yellow" size={20} />
+              <span className="group-hover:-translate-y-1">
+                <FaCloudDownloadAlt color="#FFC700" size={20} />
+              </span>
               download
             </a>
             <div>
@@ -63,10 +107,13 @@ const AboutPage = () => {
               )}
             </div>
 
-            <div className="flex gap-5 mx-auto">
-              <button className=" btn-circle hover:-rotate-6">
+            <div className="flex gap-5 mx-auto justify-center items-center mt-3 mb-10">
+              <button
+                className={`${
+                  page === 1 && "cursor-not-allowed"
+                }   btn-circle hover:-rotate-6`}
+              >
                 <MdNextPlan
-                  color="yellow"
                   size={40}
                   style={{ transform: "scaleX(-1)" }}
                   onClick={() => {
@@ -74,13 +121,16 @@ const AboutPage = () => {
                   }}
                 />
               </button>
+              Page {page} of 2
               <button
-                className=" btn-circle hover:rotate-6"
+                className={`${
+                  page === 2 && "cursor-not-allowed"
+                }   btn-circle hover:-rotate-6`}
                 onClick={() => {
                   setPage(2);
                 }}
               >
-                <MdNextPlan color="yellow" size={40} />
+                <MdNextPlan size={40} />
               </button>
             </div>
           </section>
