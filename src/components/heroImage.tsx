@@ -3,7 +3,7 @@ import React from "react";
 const HeroImage = () => {
   return (
     <header className="bg-[url('../images/header.gif')] dark:invert bg-white py-10 flex flex-col justify-center bg-fixed">
-      <h1 className="text-3xl md:text-5xl mx-auto leading-tight dark:invert">
+      <h3 className="text-3xl md:text-5xl mx-auto leading-tight dark:invert">
         <span className="flex">
           Hello
           <span className="text-[rgb(255,64,64)] dark:text-[rgb(255,64,64)]  ">
@@ -35,7 +35,7 @@ const HeroImage = () => {
         </div>
         <br />
         <span>&#125;</span>
-      </h1>
+      </h3>
       <span className="mx-auto text-lg md:text-xl text-bermuda w-80 dark:invert text-center">
         I'm developing. You're browsing.
         <span className="animate-blinking-text absolute">|</span>

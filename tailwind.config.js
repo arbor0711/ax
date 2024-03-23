@@ -17,6 +17,7 @@ module.exports = {
       },
       navy: "#14213d",
       caterpillar: "#fca311",
+      raspberry: "#a91079",
       headings: "#1c1c1c",
       texty: "#262626",
       bg_dark: "#000",

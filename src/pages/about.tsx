@@ -85,15 +85,15 @@ const AboutPage = () => {
             />
           </section>
 
-          <section className="text-center flex flex-col">
+          <section className="flex flex-col justify-center items-center">
             <h2 className="text-h2 mt-h2t mb-h2b">Resume</h2>
 
             <a
-              className="group btn  mb-5 "
+              className="group btn  mb-5 btn-wide "
               href={resume}
               download="Alireza-Keshavarz-Shirazi-CV"
             >
-              <span className="group-hover:-translate-y-1">
+              <span className="group-hover:translate-y-0.5 transition duration-300">
                 <FaCloudDownloadAlt color="#FFC700" size={20} />
               </span>
               download
