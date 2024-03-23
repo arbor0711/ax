@@ -5,3 +5,5 @@ src/gatsby-types.d.ts
 public.zip
 backlog.txt
 documentation.md
+.env.production
+.env.development
