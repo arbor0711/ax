@@ -1,16 +1,18 @@
 import { Link, graphql, type PageProps } from "gatsby";
 import * as React from "react";
-import HeroImage from "../components/heroImage";
+import DividerLine from "../components/dividerLine";
+import { GrProjects, GrArticle } from "react-icons/gr";
+
+// import AwesomeWebsites from "../components/homePage/awesomeWebsites";
+import GreetingCard from "../components/homePage/greeting";
+import HeroImage from "../components/homePage/heroImage";
+import IntroductionCard from "../components/homePage/introduction";
 import Layout from "../components/layout";
 import Padding from "../components/padding";
 import Posts from "../components/posts";
-import Seo from "../components/seo";
-import Portfolio from "../components/portfolio";
 import ProjectCard from "../components/projectCard";
-import DividerLine from "../components/dividerLine";
-import AwesomeWebsites from "./../components/awesomeWebsites";
-import GreetingCard from "../components/greeting";
-import IntroductionCard from "../components/introduction";
+import Seo from "../components/seo";
+import ButtonLink from "../components/buttonLink";
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
   return (
@@ -19,21 +21,23 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
 
       <Padding>
         <main>
-          <section className="flex flex-col lg:flex-row gap-10 my-10">
+          <section className="flex flex-col lg:flex-row gap-10 my-10 ">
             <GreetingCard />
             <IntroductionCard />
           </section>
 
-          <section className="bg-bermuda my-10 py-10 flex flex-col justify-center">
+          <section className="my-10 py-10 flex flex-col justify-center">
             <h2 className="mb-10 text-center">Latest Posts</h2>
             <Posts data={data} />
-            <Link to="/blog" className="btn btn-primary m-auto my-10">
-              All Posts
-            </Link>
+            <ButtonLink
+              href="/blog"
+              label="Explore All Posts "
+              iconAfter={<GrArticle color="#FFC700" />}
+            />
           </section>
 
           <section className="h-64 flex justify-center m-auto">
-            <AwesomeWebsites />
+            {/* <AwesomeWebsites /> */}
           </section>
 
           <section className="mb-10">
@@ -41,15 +45,17 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
               <DividerLine />
               Portfolio
             </h2>
-            <div className="my-20 flex flex-col md:flex-row gap-5 justify-center">
+            <div className="my-20 flex flex-col md:flex-row gap-5 justify-center items-center">
               <ProjectCard />
               <ProjectCard />
               <ProjectCard />
             </div>
             <div className="text-center">
-              <Link to="/" className="btn btn-primary btn-wide ">
-                See All
-              </Link>
+              <ButtonLink
+                href="/portfolio"
+                label="Explore All Projects"
+                iconAfter={<GrProjects color="#FFC700" />}
+              />
             </div>
           </section>
         </main>

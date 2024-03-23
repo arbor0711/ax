@@ -49,6 +49,7 @@ module.exports = {
         h4t: "0.67rem",
         h4b: "0.67rem",
         section: "15rem",
+        ninety: "90vh",
       },
       borderRadius: {
         round: "2rem",
@@ -79,11 +80,20 @@ module.exports = {
             "background-position": "right center",
           },
         },
+        bg: {
+          "0%, 100%": {
+            "background-position": "top",
+          },
+          "50%": {
+            "background-position": "bottom",
+          },
+        },
       },
       animation: {
         "waving-hand": "wave 2s linear infinite",
         "colorful-text": "text 3s ease infinite",
         "blinking-text": "blink 1.2s linear infinite",
+        "projectPage-background": "bg 35s linear infinite",
       },
     },
   },

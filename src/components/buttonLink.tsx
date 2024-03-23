@@ -17,7 +17,11 @@ const ButtonLink = ({
   download,
 }: Props) => {
   return (
-    <Link to={href} className="group btn   mt-3 mb-5  " download={download}>
+    <Link
+      to={href}
+      className="group btn mt-3 mb-5 m-auto flex justify-center items-center"
+      download={download}
+    >
       <span className="group-hover:-translate-y-1 transition duration-3000">
         {iconBefore}
       </span>

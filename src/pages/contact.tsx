@@ -100,10 +100,11 @@ const ContactForm = () => {
         theme="light"
       />
       <div className="max-w-6xl mx-auto rounded-lg ">
-        <div className="grid md:grid-cols-2 items-center gap-16 sm:p-10 p-4 ">
+        <div className="grid md:grid-cols-2  gap-16 sm:p-10 p-4 ">
           <ContactInfo />
 
-          <form ref={form} onSubmit={sendEmail} className="mt-8 space-y-4">
+          <form ref={form} onSubmit={sendEmail} className="space-y-4">
+            <h2 className="mt-0">Contact Form</h2>
             <div className="bg-gray-200 p-6 rounded-lg">
               <p className="text-sm font-semibold text-[#333]">
                 I'm interested in...

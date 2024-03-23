@@ -60,10 +60,16 @@ const NavBar = ({ toggleMode }: Props) => {
           {/* menu links */}
           <div className="items-center hidden md:flex ">
             <Link
-              to="/"
+              to="/blog"
               className="text-gray-300 hover:text-white px-3 py-2 link-hover"
             >
-              Home
+              Blog
+            </Link>
+            <Link
+              to="/portfolio"
+              className="text-gray-300 hover:text-white px-3 py-2 link-hover"
+            >
+              Portfolio
             </Link>
             <Link
               to="/about"
@@ -71,12 +77,7 @@ const NavBar = ({ toggleMode }: Props) => {
             >
               About
             </Link>
-            <Link
-              to="/blog"
-              className="text-gray-300 hover:text-white px-3 py-2 link-hover"
-            >
-              Blog
-            </Link>
+
             <Link
               to="/contact"
               className="text-gray-300 hover:text-white px-3 py-2 link-hover"
@@ -120,7 +121,13 @@ const NavBar = ({ toggleMode }: Props) => {
                       <Link to="/blog">BLOG</Link>
                     </li>
                     <li className="border-b-2 border-b-caterpillar py-2">
+                      <Link to="/portfolio">Portfolio</Link>
+                    </li>
+                    <li className="border-b-2 border-b-caterpillar py-2">
                       <Link to="/about">ABOUT</Link>
+                    </li>
+                    <li className="border-b-2 border-b-caterpillar py-2">
+                      <Link to="/contact">Contact</Link>
                     </li>
                   </div>
                   {/* close button */}

@@ -1,12 +1,12 @@
 import React from "react";
-import DividerLine from "./dividerLine";
+import DividerLine from "../dividerLine";
 import { Link } from "gatsby";
-import ButtonLink from "./buttonLink";
+import ButtonLink from "../buttonLink";
 import { GrProjects } from "react-icons/gr";
 
 const IntroductionCard = () => {
   return (
-    <div className="p-10 lg:w-1/2 border rounded-lg">
+    <div className="p-10 lg:w-1/2 border rounded-lg mx-10">
       <DividerLine />
       <span className="mb-10">ABOUT ME</span>
       <h1>
