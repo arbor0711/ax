@@ -3,25 +3,13 @@ import React from "react";
 import { IconType } from "react-icons";
 
 interface Props {
-  download?: string;
-  href: string;
   label: string;
   iconBefore?: any;
   iconAfter?: any;
 }
-const ButtonLink = ({
-  href,
-  label,
-  iconBefore,
-  iconAfter,
-  download,
-}: Props) => {
+const Button = ({ label, iconBefore, iconAfter }: Props) => {
   return (
-    <Link
-      to={href}
-      className="group btn mt-3 mb-5 flex justify-center items-center"
-      download={download}
-    >
+    <button className="group btn mt-3 mb-5 flex justify-center items-center">
       <span className="group-hover:-translate-y-1 transition duration-3000">
         {iconBefore}
       </span>
@@ -29,8 +17,8 @@ const ButtonLink = ({
       <span className="group-hover:translate-x-1 transition duration-3000">
         {iconAfter}
       </span>
-    </Link>
+    </button>
   );
 };
 
-export default ButtonLink;
+export default Button;

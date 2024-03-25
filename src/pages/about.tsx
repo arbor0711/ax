@@ -8,7 +8,7 @@ import { MdNextPlan } from "react-icons/md";
 import ButtonLink from "../components/buttonLink";
 import Layout from "../components/layout";
 import Padding from "../components/padding";
-import ProjectCard from "../components/projectCard";
+import ProjectCard from "../components/portfolio/projectCard";
 import Seo from "../components/seo";
 import Toolkit from "../components/toolkit";
 import { toolkit } from "../data/data";
@@ -46,11 +46,13 @@ const AboutPage = () => {
                 proficiency in TypeScript enhances code quality and
                 maintainability.
               </p>
-              <ButtonLink
-                href="/contact"
-                label="Lets Work Together"
-                iconAfter={<FaArrowRightLong color="#FFC700" />}
-              />
+              <div className="w-64">
+                <ButtonLink
+                  href="/contact"
+                  label="Lets Work Together"
+                  iconAfter={<FaArrowRightLong color="#FFC700" />}
+                />
+              </div>
             </div>
 
             <StaticImage
@@ -78,18 +80,20 @@ const AboutPage = () => {
               <ProjectCard />
               <ProjectCard />
             </div>
-            <ButtonLink
-              href="/portfolio"
-              label="See All Projects"
-              iconAfter={<GrProjects color="#FFC700" />}
-            />
+            <div className="mx-auto w-64">
+              <ButtonLink
+                href="/portfolio"
+                label="See All Projects"
+                iconAfter={<GrProjects color="#FFC700" />}
+              />
+            </div>
           </section>
 
           <section className="flex flex-col justify-center items-center">
             <h2 className="text-h2 mt-h2t mb-h2b">Resume</h2>
 
             <a
-              className="group btn  mb-5 btn-wide "
+              className="group btn mb-5 w-64"
               href={resume}
               download="Alireza-Keshavarz-Shirazi-CV"
             >

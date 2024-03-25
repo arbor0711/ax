@@ -10,7 +10,7 @@ import IntroductionCard from "../components/homePage/introduction";
 import Layout from "../components/layout";
 import Padding from "../components/padding";
 import Posts from "../components/posts";
-import ProjectCard from "../components/projectCard";
+import ProjectCard from "../components/portfolio/projectCard";
 import Seo from "../components/seo";
 import ButtonLink from "../components/buttonLink";
 
@@ -29,11 +29,13 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
           <section className="my-10 py-10 flex flex-col justify-center">
             <h2 className="mb-10 text-center">Latest Posts</h2>
             <Posts data={data} />
-            <ButtonLink
-              href="/blog"
-              label="Explore All Posts "
-              iconAfter={<GrArticle color="#FFC700" />}
-            />
+            <div className="mx-auto w-64">
+              <ButtonLink
+                href="/blog"
+                label="Explore All Posts "
+                iconAfter={<GrArticle color="#FFC700" />}
+              />
+            </div>
           </section>
 
           <section className="h-64 flex justify-center m-auto">
@@ -50,7 +52,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
               <ProjectCard />
               <ProjectCard />
             </div>
-            <div className="text-center">
+            <div className="text-center w-64 mx-auto">
               <ButtonLink
                 href="/portfolio"
                 label="Explore All Projects"
