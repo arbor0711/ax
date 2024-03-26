@@ -100,7 +100,11 @@ export interface Project {
   >;
   condition: boolean;
   role: Array<"Developer" | "Designer">;
-  testimonial: string;
+  testimonial?: {
+    text: string;
+    person: string;
+    avatar: React.JSX.Element;
+  };
 }
 export const projectsInfo: Project[] = [
   {
@@ -115,10 +119,9 @@ export const projectsInfo: Project[] = [
     title: "Sakar, a producer of specialized fast food spices",
     address: "912saakaar.com",
     type: ["Corporate Website"],
-    service: ["Web Design"],
+    service: ["Web Development"],
     condition: true,
     role: ["Developer"],
-    testimonial: "",
   },
 
   {
@@ -127,13 +130,22 @@ export const projectsInfo: Project[] = [
       <StaticImage src="../images/portfolio/atlas22.co.png" alt="languages" />
     ),
     imgSrc: "../images/portfolio/atlas22.co.png",
-    title: "project 1",
-    address: "devscoops.com",
-    type: ["NGO Website", "E-commerce Website"],
-    service: ["Graphic Design", "Web Design"],
+    title: "The Real Estate consultant Tehran/District 22",
+    address: "atlas22.co",
+    type: ["Corporate Website"],
+    service: ["Web Development", "Web Design"],
     condition: true,
-    role: ["Designer"],
-    testimonial: "string;",
+    role: ["Developer", "Designer"],
+    testimonial: {
+      text: "Working with Alireza was a game-changer for our real estate business in District 22, Tehran. In just four weeks, he crafted a stunning website that perfectly captured the essence of our properties and services. His swift and skillful development ensured we were up and running in no time. Thank you for your exceptional talent and dedication!",
+      person: "Amir Sadeqi",
+      avatar: (
+        <StaticImage
+          src="../images/portfolio/amirSadeqi.jpg"
+          alt="Client avatar image."
+        />
+      ),
+    },
   },
   {
     id: 3,
@@ -147,41 +159,48 @@ export const projectsInfo: Project[] = [
     service: ["Graphic Design", "Web Design"],
     condition: true,
     role: ["Designer"],
-    testimonial: "string;",
+    testimonial: {
+      text: " ",
+      person: "Arash Ashrafi",
+      avatar: (
+        <StaticImage
+          src="../images/portfolio/amirSadeqi.jpg"
+          alt="Client avatar image."
+        />
+      ),
+    },
   },
   {
     id: 4,
     img: (
       <StaticImage
-        src="../images/portfolio/e - learningland.com.png"
+        src="../images/portfolio/elearningland.com.png"
         alt="languages"
       />
     ),
-    imgSrc: "../images/portfolio/e - learningland.com.png",
+    imgSrc: "../images/portfolio/elearningland.com.png",
     title: "project 1",
     address: "devscoops.com",
     type: ["NGO Website", "E-commerce Website"],
     service: ["Graphic Design", "Web Design"],
     condition: true,
     role: ["Designer"],
-    testimonial: "string;",
   },
   {
     id: 5,
     img: (
       <StaticImage
-        src="../images/portfolio/nbp - perfume.com.png"
+        src="../images/portfolio/nbpperfume.com.png"
         alt="languages"
       />
     ),
-    imgSrc: "../images/portfolio/nbp - perfume.com.png",
+    imgSrc: "../images/portfolio/nbpperfume.com.png",
     title: "project 1",
     address: "devscoops.com",
     type: ["NGO Website", "E-commerce Website"],
     service: ["Graphic Design", "Web Design"],
     condition: true,
     role: ["Designer"],
-    testimonial: "string;",
   },
   {
     id: 6,
@@ -195,7 +214,6 @@ export const projectsInfo: Project[] = [
     service: ["Graphic Design", "Web Design"],
     condition: true,
     role: ["Designer"],
-    testimonial: "string;",
   },
   {
     id: 7,
@@ -209,7 +227,6 @@ export const projectsInfo: Project[] = [
     service: ["Graphic Design", "Web Design"],
     condition: true,
     role: ["Designer"],
-    testimonial: "string;",
   },
   {
     id: 8,
@@ -226,6 +243,5 @@ export const projectsInfo: Project[] = [
     service: ["Graphic Design", "Web Design"],
     condition: true,
     role: ["Designer"],
-    testimonial: "string;",
   },
 ];

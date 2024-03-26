@@ -11,11 +11,10 @@ import { Project, projectsInfo } from "../data/data";
 const portfolio = () => {
   const [visibility, setVisibility] = useState(false);
   const [showcaseData, setShowcaseData] = useState<Project>();
-  console.log(showcaseData);
+
   const handleCallback = (data: Project) => {
     setVisibility(!visibility);
     setShowcaseData(data);
-    console.log(data);
   };
   const handleClick = () => {
     setVisibility(!visibility);
@@ -40,9 +39,9 @@ const portfolio = () => {
                 <div className="flex flex-wrap gap-10 my-10">
                   {projectsInfo.map((project) => {
                     return (
-                      <>
+                      <div key={project.id}>
                         <ProjectCard data={project} onClick={handleCallback} />
-                      </>
+                      </div>
                     );
                   })}
                 </div>

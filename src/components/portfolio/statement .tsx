@@ -18,13 +18,17 @@ const Statement = () => {
       </h3>
       <p className=" text-gray-400 leading-9">
         I’m proud of the <strong>relationships</strong> I’ve built with my{" "}
-        <strong>colleagues</strong> and
-        <strong>clients</strong>, as well as the websites and applications we’ve
-        built
+        <strong>colleagues</strong> and <strong>clients</strong>, as well as the
+        websites and applications we’ve built
         <strong>together</strong>. My <strong></strong>goal is to make life{" "}
         <strong>easier</strong> for all people who <strong>engage</strong>
         with my works through <strong>user-centric</strong> design,{" "}
         <strong>usability, and functionality.</strong>
+      </p>
+      <p className="mt-2 text-gray-400 leading-9">
+        This page serves as a showcase for the <strong>side projects</strong>{" "}
+        I've had the privilege of contributing as either developer or designer ,
+        and occasionally both.
       </p>
     </article>
   );
