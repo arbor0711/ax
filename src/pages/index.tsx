@@ -13,8 +13,10 @@ import Posts from "../components/posts";
 import ProjectCard from "../components/portfolio/projectCard";
 import Seo from "../components/seo";
 import ButtonLink from "../components/buttonLink";
+import { projectsInfo } from "../data/data";
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
+  const projects = projectsInfo.slice(0, 3);
   return (
     <Layout>
       <HeroImage />
@@ -48,9 +50,11 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
               Portfolio
             </h2>
             <div className="my-20 flex flex-col md:flex-row gap-5 justify-center items-center">
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
+              {projects.map((project) => (
+                <div key={project.id}>
+                  <ProjectCard data={project} />
+                </div>
+              ))}
             </div>
             <div className="text-center w-64 mx-auto">
               <ButtonLink

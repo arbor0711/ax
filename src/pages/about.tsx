@@ -11,7 +11,7 @@ import Padding from "../components/padding";
 import ProjectCard from "../components/portfolio/projectCard";
 import Seo from "../components/seo";
 import Toolkit from "../components/toolkit";
-import { toolkit } from "../data/data";
+import { projectsInfo, toolkit } from "../data/data";
 import resume from "../data/resume.pdf";
 
 const AboutPage = () => {
@@ -76,9 +76,11 @@ const AboutPage = () => {
           <section className="text-center my-10">
             <h2 className="text-h2 mt-h2t mb-h2b">Portfolio</h2>
             <div className="flex flex-col md:flex-row justify-center items-center mb-5 gap-10">
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
+              {projectsInfo.slice(0, 3).map((project) => (
+                <div key={project.id}>
+                  <ProjectCard data={project} />
+                </div>
+              ))}
             </div>
             <div className="mx-auto w-64">
               <ButtonLink
