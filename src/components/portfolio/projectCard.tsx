@@ -4,7 +4,7 @@ import { card, details } from "./projectCard.module.css";
 
 interface Props {
   // At the finish you should delete ? for type defining
-  onClick?: (data: Project) => void;
+  onClick: (data: Project) => void;
   data: Project;
 }
 const ProjectCard = ({ onClick, data }: Props) => {

@@ -16,8 +16,12 @@ const portfolio = () => {
     setVisibility(!visibility);
     setShowcaseData(data);
   };
-  const handleClick = () => {
+  const onClose = () => {
     setVisibility(!visibility);
+  };
+  const onFlip = (id: number) => {
+    const data = projectsInfo.find((project) => project.id === id);
+    setShowcaseData(data);
   };
 
   return (
@@ -51,7 +55,11 @@ const portfolio = () => {
         </Layout>
       )}
       {visibility && (
-        <ProjectShowcase data={showcaseData} onClick={handleClick} />
+        <ProjectShowcase
+          data={showcaseData}
+          handleClose={onClose}
+          handleFlipping={onFlip}
+        />
       )}
     </div>
   );
