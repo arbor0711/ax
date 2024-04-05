@@ -132,16 +132,22 @@
 
 import { projectsInfo } from "../data/data";
 import { PortfolioContext } from "./../hooks/portfolioContext";
-import React from "react";
+import React, { useState } from "react";
 
 export const PortfolioProvider = ({
   children,
 }: {
   children: React.ReactNode;
 }) => {
-  let visibility = false;
+  // Here just set the default values for the context. No matter what, the values will read from context file not provider.
   let showcaseData = projectsInfo[0];
-  <PortfolioContext.Provider value={{ visibility, showcaseData }}>
+  let onClose = () => {};
+  let onFlip = () => {};
+  const [visibility, setVisibility] = useState(false);
+
+  <PortfolioContext.Provider
+    value={{ visibility, setVisibility, showcaseData, onClose, onFlip }}
+  >
     {children}
   </PortfolioContext.Provider>;
 };

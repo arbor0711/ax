@@ -9,8 +9,17 @@ import { Project, projectsInfo } from "../data/data";
 import { PortfolioContext } from "../hooks/portfolioContext";
 
 const portfolio = () => {
-  const value = useContext(PortfolioContext);
-  console.log(value);
+  const { onClose, onFlip, showcaseData, visibility, setVisibility } =
+    useContext(PortfolioContext);
+  console.log(visibility, showcaseData);
+  onClose();
+  onFlip(1);
+  setVisibility(true);
+  // ************************************************
+  // من تا اینجا تونستم یک وریبل و یک فانکشن رو پس کنم اما الان باید بتونم یوزاستیت رو پس کنم
+  // So i just pass useState
+  // ******************************************************
+  console.log(visibility);
 
   // const [visibility, setVisibility] = useState(false);
   // const [showcaseData, setShowcaseData] = useState<Project>();
