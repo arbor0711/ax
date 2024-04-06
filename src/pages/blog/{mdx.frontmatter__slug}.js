@@ -27,21 +27,27 @@ const BlogPost = ({ data, children }) => {
       >
         <header className="relative -top-24 left-0 right-0 ">
           <div className="w-full h-full bg-navy opacity-75 absolute z-10 top-0 left-0 right-0"></div>
-          <div className=" backdrop-blur-sm">
+          <div>
             <GatsbyImage
-              className="min-h-[300px]"
+              className="h-screen sm:min-h-[300px]"
               image={image}
               alt={data.mdx.frontmatter.hero_image_alt}
             />
           </div>
-          <div className=" absolute top-24 sm:top-28 md:top-24 lg:top-36 left-0 right-0 w-10/12 mx-auto text-center z-20">
+          <div
+            className=" absolute flex flex-col justify-center items-center w-full h-full
+            text-center top-0 z-10"
+          >
             <h1 className=" text-[1.2rem] sm:text-[1.7rem] md:text-[2rem] lg:text-[2.5rem] font-extrabold text-white mb-5">
               {data.mdx.frontmatter.title}
             </h1>
-            <div className="hidden sm:flex gap-3 justify-center items-center">
+            <div className="flex gap-3 justify-center items-center ">
               <span className="size-[66px] md:size-[76px] p-2 border border-white border-opacity-20 rounded-full flex justify-center items-center">
-                <img src={authorImage} alt="author" className="rounded-full " />
-                {/* <StaticImage src="../../images/author.jpg" alt="author" /> */}
+                <img
+                  src={authorImage}
+                  alt="author"
+                  className="rounded-full grayscale contrast-100	"
+                />
               </span>
               <div className="flex flex-col items-start gap-1">
                 <p className="text-[#5eecbe] text-[0.75rem] md:text-[1.25rem]">
