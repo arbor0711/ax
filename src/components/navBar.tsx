@@ -42,7 +42,7 @@ const NavBar = ({ toggleMode }: Props) => {
     <nav
       className={` bg-bg_bar text-bg_light py-3 mx-auto w-11/12 sticky top-0 z-10 rounded-b-3xl ${
         scrollUp ? "translate-y-0" : "-translate-y-full"
-      } transition-transform duration-300 ease-in-out z-50 shadow-navbar`}
+      } transition-transform duration-300 ease-in-out z-50 `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">

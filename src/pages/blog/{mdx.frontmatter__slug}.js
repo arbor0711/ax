@@ -26,7 +26,7 @@ const BlogPost = ({ data, children }) => {
       //  pageTitle={data.mdx.frontmatter.title}
       >
         <header className="relative -top-24 left-0 right-0 ">
-          <div className="w-full h-full bg-navy opacity-75 absolute z-10 top-0 left-0 right-0"></div>
+          <div className="w-full h-full bg-navy opacity-85 absolute z-10 top-0 left-0 right-0 "></div>
           <div>
             <GatsbyImage
               className="h-screen sm:min-h-[300px]"
@@ -36,9 +36,9 @@ const BlogPost = ({ data, children }) => {
           </div>
           <div
             className=" absolute flex flex-col justify-center items-center w-full h-full
-            text-center top-0 z-10"
+            text-center top-0 z-10 "
           >
-            <h1 className=" text-[1.2rem] sm:text-[1.7rem] md:text-[2rem] lg:text-[2.5rem] font-extrabold text-white mb-5">
+            <h1 className=" text-[1.2rem] sm:text-[1.7rem] md:text-[2rem] lg:text-[2.5rem] font-extrabold text-white mb-5 w-10/12">
               {data.mdx.frontmatter.title}
             </h1>
             <div className="flex gap-3 justify-center items-center ">
