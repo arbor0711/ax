@@ -50,7 +50,7 @@ const BlogPost = ({ data, children }) => {
                 />
               </span>
               <div className="flex flex-col items-start gap-1">
-                <p className="text-[#5eecbe] text-[0.75rem] md:text-[1.25rem]">
+                <p className="text-caterpillar text-[0.75rem] md:text-[1.25rem]">
                   Alireza Keshavarz Shirazi
                 </p>
                 <p className="text-white text-[0.65rem] md:text-[1rem]">

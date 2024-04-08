@@ -48,14 +48,12 @@ const ProjectShowcase = ({ data, handleClose, handleFlipping }: Props) => {
         </div>
       </div>
 
-      {/* TODO: heading */}
       <h2 className="text-h2 md:text-h1 text-gray-100 w-3/4 text-center mt-10">
         {data.title}
       </h2>
 
       <div className="flex flex-col-reverse md:flex-row mt-5 px-10 gap-10 justify-center items-center">
         <aside className="flex flex-col items-center w-1/2">
-          {/* TODO:  SITE */}
           <a
             className="text-white flex mb-5 z-50"
             href={data.address}
@@ -67,9 +65,7 @@ const ProjectShowcase = ({ data, handleClose, handleFlipping }: Props) => {
             </span>
           </a>
 
-          {/* TODO: Project pic */}
-
-          <div className="rounded-t-xl overflow-hidden h-[360px] w-[480px] mb-3 border border-black border-b-8">
+          <div className="rounded-t-xl overflow-hidden mb-3 border border-black border-b-8 h-[360px] w-[480px]">
             {data.img}
           </div>
         </aside>
@@ -83,7 +79,7 @@ const ProjectShowcase = ({ data, handleClose, handleFlipping }: Props) => {
 
             <div className="text-gray-100 font-light text-sm">
               <span className="text-gray-100 italic font-medium">
-                Website Type:{" "}
+                Website Type:
               </span>
               <span className=" text-gray-400 ml-5">{data.type}</span>
             </div>
@@ -120,7 +116,7 @@ const ProjectShowcase = ({ data, handleClose, handleFlipping }: Props) => {
                 </span>
               ))}
             </div>
-            {/* TODO: testimonial */}
+
             {data.testimonial && (
               <div className="flex flex-col gap-5  mt-10">
                 <div className="flex gap-5 items-center ">

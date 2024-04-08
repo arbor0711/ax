@@ -19,7 +19,7 @@ https://stackoverflow.com/questions/62497110/detect-scroll-direction-in-react-js
 React hook form - validation with zod -TS
 https://github.com/arbor0711/nervis2.0.3-MoHam/blob/main/src/components/Form.tsx
 
-how to type from submmitting on react TS
+how to type form submmitting on react TS
 https://epicreact.dev/how-to-type-a-react-form-on-submit-handler/
 
 add environmental variable to gatsby
