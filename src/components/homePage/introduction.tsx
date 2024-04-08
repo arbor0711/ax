@@ -18,7 +18,7 @@ const IntroductionCard = () => {
         I also write and speak about web development, JavaScript libraries, and
         technology.
       </p>
-      <div className="flex gap-5 mt-10">
+      <div className="flex flex-col sm:flex-row gap-5 mt-10">
         <Link to="/about" className="group btn mt-3 mb-5 z-0 ">
           More Info{" "}
           <span className="text-caterpillar dark:text-caterpillar">.</span>

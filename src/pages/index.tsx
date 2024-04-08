@@ -60,7 +60,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
                 <IntroductionCard />
               </section>
 
-              <section className="my-10 py-10 flex flex-col justify-center">
+              <section className="my-10 py-10 flex flex-col justify-center bg-gray-100 dark:bg-gray-900 -mx-20 px-20">
                 <h2 className="mb-10 text-center">Latest Posts</h2>
                 <Posts data={data} />
                 <div className="mx-auto w-64">
