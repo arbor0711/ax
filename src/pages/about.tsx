@@ -24,20 +24,19 @@ const AboutPage = () => {
           <section className="flex flex-col items-center md:flex-row md:justify-between px-10">
             <div className="w-full md:w-2/4">
               <p>
-                Hi. I am Alireza, a curious <strong>Frontend Engineer</strong>{" "}
-                with a deep sense of ownership, driving me to go the extra mile
-                in every project to ensure that every detail of the product
-                backlog leads to outstanding sprint results. My proficiency in
-                Next.js, React, and TypeScript enables me to take innovative
-                approaches to achieve notable performance.
+                Hi. I am Alireza, a curious web developer with a deep sense of
+                ownership, driving me to go the extra mile in every project to
+                ensure that every detail of the product backlog leads to
+                outstanding sprint results. My proficiency in Next.js, React,
+                and TypeScript enables me to take innovative approaches to
+                achieve notable performance.
                 <br />
-                With over <strong>7 years</strong> of experience in frontend
-                development and product design, I consistently promote the use
-                of the newest technologies and strive to elevate standards in
-                web accessibility and usability. I am a team player who
-                collaborates effectively with cross-functional teams,
-                appreciates knowledge sharing, and values continuous growth for
-                all team members.
+                With over years of experience in frontend design and
+                development, I consistently promote the use of the newest
+                technologies and strive to elevate standards in web
+                accessibility and usability. I am a team player who collaborates
+                effectively with cross-functional teams, appreciates knowledge
+                sharing, and values continuous growth for all team members.
                 <br />
                 As a technology and gaming enthusiast, I believe I can deliver
                 high-quality solutions that consistently meet and exceed project
@@ -56,7 +55,8 @@ const AboutPage = () => {
             </div>
 
             <StaticImage
-              className="float-right m-5  w-2/3 md:w-1/3 size-fit rounded-full"
+              className="float-right m-5  w-2/3 md:w-1/3 size-fit "
+              style={{ borderRadius: "100%" }}
               alt="Gatsby Image"
               src="../images/aboutMe.jpg"
             />
