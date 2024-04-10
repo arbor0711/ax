@@ -19,7 +19,7 @@ import ProjectCard from "../components/portfolio/projectCard";
 import DividerLine from "../components/dividerLine";
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
-  // NEW LINES
+  //Project Showcase states and handlers
   const [visibility, setVisibility] = useState(false);
   const [showcaseData, setShowcaseData] = useState<Project>();
   const handleCallback = (data: Project) => {
@@ -33,17 +33,11 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
     const data = projectsInfo.find((project) => project.id === id);
     setShowcaseData(data);
   };
-  console.log(visibility);
-  // NEW LINES
-
   const projects = projectsInfo.slice(0, 3);
 
   return (
     <div className="relative">
       {visibility ? (
-        // <div className="bg-white text-black text-6xl flex justify-center items-center">
-        //   I am here
-        // </div>
         <ProjectShowcase
           data={showcaseData}
           handleClose={onClose}
