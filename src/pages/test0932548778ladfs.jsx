@@ -1,7 +1,12 @@
 import React from "react";
+import LoadingComponent from "../components/loadingComponent";
 
-const Test0932548778ladfs = () => {
-  return <div>Test0932548778ladfs</div>;
+const Test = () => {
+  return (
+    <div>
+      <LoadingComponent />
+    </div>
+  );
 };
 
-export default Test0932548778ladfs;
+export default Test;
