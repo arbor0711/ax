@@ -30,5 +30,9 @@ https://blog.theashishmaurya.me/validating-your-react-forms-with-zod-and-no-hook
 Fix bug:request.formData() isn't typed for Object.fromEntries()
 https://github.com/BuilderIO/qwik/pull/1371/commits/2cbbe45eadb071494303de3550b589175577af2c
 
-Share buttons
+Share buttons(twitter, facebook, ...)
 https://www.npmjs.com/package/react-share
+
+useContext Hook in Gatsby
+(Usecase for providing dark mode)
+https://www.gatsbyjs.com/blog/2019-01-31-using-react-context-api-with-gatsby/

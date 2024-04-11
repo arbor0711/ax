@@ -1,5 +1,5 @@
-import { graphql, type PageProps } from "gatsby";
 import * as React from "react";
+import { graphql, type PageProps } from "gatsby";
 import { GrArticle, GrProjects } from "react-icons/gr";
 
 // import AwesomeWebsites from "../components/homePage/awesomeWebsites";
