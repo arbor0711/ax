@@ -35,7 +35,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
   };
   const projects = projectsInfo.slice(0, 3);
 
-  const posts = data.allMdx.nodes;
+  const posts = data.allMdx.nodes.slice(0, 3);
 
   return (
     <div className="relative">
@@ -56,7 +56,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
                 <IntroductionCard />
               </section>
 
-              <section className="my-10 py-10 flex flex-col justify-center bg-gray-100 dark:bg-gray-900 -mx-20 px-20">
+              <section className="my-10 py-10 flex flex-col justify-center px-20 bg-[url('../images/bg-gradient.png')] bg-fixed bg-no-repeat bg-opacity-50 bg-center bg-blend-screen">
                 <h2 className="mb-10 text-center">Latest Posts</h2>
                 <Posts data={posts} />
                 <div className="mx-auto w-64">
@@ -68,9 +68,9 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
                 </div>
               </section>
 
-              <section className="h-64 flex justify-center m-auto">
-                {/* <AwesomeWebsites /> */}
-              </section>
+              {/* <section className="h-64 flex justify-center m-auto">
+                <AwesomeWebsites />
+              </section> */}
 
               <section className="mb-10">
                 <h2>
