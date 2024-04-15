@@ -1,9 +1,9 @@
 import * as React from "react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
 import NavBar from "./navBar";
 import Footer from "./footer";
-import LoadingComponent from "./loadingComponent";
+// import LoadingComponent from "./loadingComponent";
 
 interface Props {
   pageTitle?: string;
@@ -12,12 +12,12 @@ interface Props {
 
 const Layout: React.FC<Props> = ({ pageTitle, children }) => {
   // Delays the rendering of the children components until the theme is loaded
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1500);
-  }, []);
+  // const [loading, setLoading] = useState(true);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 1500);
+  // }, []);
 
   // Dark mode toggling
   const { theme, toggleTheme } = useTheme();
@@ -29,9 +29,9 @@ const Layout: React.FC<Props> = ({ pageTitle, children }) => {
     // localStorage.setItem("theme", theme);
   }, [theme, colorTheme]);
 
-  if (loading) {
-    return <LoadingComponent />;
-  }
+  // if (loading) {
+  //   return <LoadingComponent />;
+  // }
   return (
     <div className="relative">
       <NavBar toggleMode={toggleTheme} />

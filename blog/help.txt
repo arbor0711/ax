@@ -14,11 +14,15 @@ hero_image_credit_link: "https://unsplash.com/photos/ocZ-_Y7-Ptg"
 
 ### Title 3
 
-**two stars**
+**strong**
+
+A paragraph, introducing a thematic break:
+
+---
 
 Here's another post! It's even better than the first one!
 
-> _Dear Mr. Carraway._
+> Block quote
 >
 > _This has been one of the most terrible shocks of my life to me I hardly can believe it that it is true at all. Such a mad act as that man did should make us all think. I cannot come down now as I am tied up in some very important business and cannot get mixed up in this thing now. If there is anything I can do a little later let me know in a letter by Edgar. I hardly know where I am when I hear about a thing like this and am completely knocked down and out._
 >
@@ -31,11 +35,11 @@ This is a gif image: ![otter dancing with a fish](../../images/dancing-otter.gif
 
 > > *Let me know about the funeral etc do not know his family at all.*44\* Oranges
 
-- Oranges
-- Apples
+* Unordered
+* List
 
-* Oranges
-* Apples
+1. Ordered
+2. List
 
 ```jsx title="example.js"
 import React from "react";

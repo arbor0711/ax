@@ -16,8 +16,6 @@ import Seo from "../../components/seo";
 import authorImage from "../../images/author.jpg";
 
 const BlogPost = ({ data, children }) => {
-  console.log(data);
-
   const image = getImage(data.mdx.frontmatter.hero_image);
   const shareUrl = `https://devscoops.com/blog/${data.mdx.frontmatter.slug}/`;
   return (
@@ -45,7 +43,7 @@ const BlogPost = ({ data, children }) => {
               <span className="size-[66px] md:size-[76px] p-2 border border-white border-opacity-20 rounded-full flex justify-center items-center">
                 <img
                   src={authorImage}
-                  alt="author"
+                  alt="Alireza Keshavarz Shirazi"
                   className="rounded-full grayscale contrast-100	"
                 />
               </span>

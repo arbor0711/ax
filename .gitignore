@@ -1,9 +1,9 @@
-node_modules/
 .cache/
-public
-src/gatsby-types.d.ts
-public.zip
-backlog.txt
-documentation.md
-.env.production
 .env.development
+.env.production
+backlog.txt
+documentation.txt
+node_modules/
+public.zip
+public1.zip
+src/gatsby-types.d.ts

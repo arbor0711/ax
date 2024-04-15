@@ -50,12 +50,12 @@ const AboutPage = () => {
               <section className="flex flex-col items-center md:flex-row md:justify-between px-10">
                 <div className="w-full md:w-2/4">
                   <p>
-                    Hi. I am Alireza, a curious web developer with a deep sense
-                    of ownership, driving me to go the extra mile in every
-                    project to ensure that every detail of the product backlog
-                    leads to outstanding sprint results. My proficiency in
-                    Next.js, React, and TypeScript enables me to take innovative
-                    approaches to achieve notable performance.
+                    Hi. I am Alireza Keshavarz Shirazi, a curious web developer
+                    with a deep sense of ownership, driving me to go the extra
+                    mile in every project to ensure that every detail of the
+                    product backlog leads to outstanding sprint results. My
+                    proficiency in Next.js, React, and TypeScript enables me to
+                    take innovative approaches to achieve notable performance.
                     <br />
                     With over years of experience in frontend design and
                     development, I consistently promote the use of the newest
@@ -84,7 +84,7 @@ const AboutPage = () => {
                 <StaticImage
                   className="float-right m-5  w-2/3 md:w-1/3 size-fit "
                   style={{ borderRadius: "100%" }}
-                  alt="Gatsby Image"
+                  alt="Alireza Keshavarz Shirazi"
                   src="../images/aboutMe.jpg"
                 />
               </section>
@@ -127,22 +127,24 @@ const AboutPage = () => {
                   href={resume}
                   download="Alireza-Keshavarz-Shirazi-CV"
                 >
-                  <span className="group-hover:translate-y-0.5 transition duration-300">
+                  <span className="group-hover:translate-y-0.5 transition duration-300 ">
                     <FaCloudDownloadAlt color="#FFC700" size={20} />
                   </span>
                   download
                 </a>
-                <div>
+                <div className="flex items-center justify-center w-full  ">
                   {page === 1 && (
                     <StaticImage
                       src="../data/cv-page-1.png"
                       alt="Resume Image"
+                      className="w-3/4 md:w-1/2 rounded-lg"
                     />
                   )}
                   {page === 2 && (
                     <StaticImage
                       src="../data/cv-page-2.png"
                       alt="Resume Image"
+                      className="w-3/4 md:w-1/2 rounded-lg"
                     />
                   )}
                 </div>

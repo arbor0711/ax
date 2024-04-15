@@ -22,7 +22,9 @@ const config: GatsbyConfig = {
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    {
+      resolve: `gatsby-transformer-sharp`,
+    },
     "gatsby-plugin-mdx",
     {
       resolve: "gatsby-plugin-manifest",
@@ -50,6 +52,17 @@ const config: GatsbyConfig = {
       options: {
         name: `pdf`,
         path: `./src/data`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {},
+          },
+        ],
       },
     },
   ],
