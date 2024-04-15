@@ -16,8 +16,21 @@ import Seo from "../../components/seo";
 import authorImage from "../../images/author.jpg";
 
 const BlogPost = ({ data, children }) => {
+  const postSlug = data.mdx.frontmatter.slug;
+  const posts = data.allMdx.nodes;
+  const otherPosts = posts.filter((post) => post.frontmatter.slug !== postSlug);
+
+  // console.log(data);
+  console.log(otherPosts);
   const image = getImage(data.mdx.frontmatter.hero_image);
-  const shareUrl = `https://devscoops.com/blog/${data.mdx.frontmatter.slug}/`;
+  const shareUrl = `https://devscoops.com/blog/${postSlug}/`;
+  // const postId = data.allMdx.nodes.filter(
+  //   (data) => data.frontmatter.slug === data.mdx.frontmatter.slug
+  // )[0].id;
+  // console.log(postId);
+  // const otherPosts = data.allMdx.nodes.filter(
+  //   (data) => data.frontmatter.slug !== data.mdx.frontmatter.slug
+  // );
   return (
     <>
       <Layout
@@ -83,7 +96,8 @@ const BlogPost = ({ data, children }) => {
 
         <section className="flex justify-center items-center flex-col">
           <h2 className="mb-5">Want to read more?</h2>
-          <Posts data={data} />
+
+          <Posts data={otherPosts} />
         </section>
       </Layout>
     </>

@@ -35,6 +35,8 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
   };
   const projects = projectsInfo.slice(0, 3);
 
+  const posts = data.allMdx.nodes;
+
   return (
     <div className="relative">
       {visibility ? (
@@ -56,7 +58,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
 
               <section className="my-10 py-10 flex flex-col justify-center bg-gray-100 dark:bg-gray-900 -mx-20 px-20">
                 <h2 className="mb-10 text-center">Latest Posts</h2>
-                <Posts data={data} />
+                <Posts data={posts} />
                 <div className="mx-auto w-64">
                   <ButtonLink
                     href="/blog"

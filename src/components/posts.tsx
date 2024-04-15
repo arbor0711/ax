@@ -7,7 +7,7 @@ interface Props {
 const Posts = ({ data }: Props) => {
   return (
     <section className="flex flex-wrap gap-5 justify-center mb-10">
-      {data.allMdx.nodes.map((node: any) => (
+      {data.map((node: any) => (
         // here I should add PostCard component
 
         <PostCard key={node.id} node={node} />

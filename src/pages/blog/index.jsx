@@ -6,6 +6,7 @@ import Padding from "./../../components/padding";
 import { graphql } from "gatsby";
 
 const BlogPage = ({ data }) => {
+  const posts = data.allMdx.nodes;
   return (
     <Layout pageTitle="My Blog">
       <Padding>
@@ -61,7 +62,7 @@ const BlogPage = ({ data }) => {
               </select>
               <div className="label"></div>
             </label> */}
-            <Posts data={data} />
+            <Posts data={posts} />
           </section>
         </section>
       </Padding>

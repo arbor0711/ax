@@ -4,6 +4,8 @@
 backlog.txt
 documentation.txt
 node_modules/
+public
+public/
 public.zip
 public1.zip
 src/gatsby-types.d.ts
