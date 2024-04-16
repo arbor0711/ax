@@ -18,6 +18,7 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
 
   plugins: [
+    "gatsby-transformer-json",
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
@@ -50,19 +51,15 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: `pdf`,
+        name: `myProjects`,
         path: `./src/data`,
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {},
-          },
-        ],
+        name: `pdf`,
+        path: `./src/data`,
       },
     },
   ],

@@ -14,65 +14,66 @@ import ButtonLink from "../components/buttonLink";
 
 import ProjectShowcase from "../components/portfolio/projectShowcase ";
 import { useState } from "react";
-import { Project, projectsInfo } from "../data/data";
+// import { Project, projectsInfo } from "../data/data";
 import ProjectCard from "../components/portfolio/projectCard";
 import DividerLine from "../components/dividerLine";
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
   //Project Showcase states and handlers
-  const [visibility, setVisibility] = useState(false);
-  const [showcaseData, setShowcaseData] = useState<Project>();
-  const handleCallback = (data: Project) => {
-    setVisibility(!visibility);
-    setShowcaseData(data);
-  };
-  const onClose = () => {
-    setVisibility(!visibility);
-  };
-  const onFlip = (id: number) => {
-    const data = projectsInfo.find((project) => project.id === id);
-    setShowcaseData(data);
-  };
-  const projects = projectsInfo.slice(0, 3);
+  // const [visibility, setVisibility] = useState(false);
+  // const [showcaseData, setShowcaseData] = useState<Project>();
+  // const handleCallback = (data: Project) => {
+  //   setVisibility(!visibility);
+  //   setShowcaseData(data);
+  // };
+  // const onClose = () => {
+  //   setVisibility(!visibility);
+  // };
+  // const onFlip = (id: number) => {
+  //   const data = projectsInfo.find((project) => project.id === id);
+  //   setShowcaseData(data);
+  // };
+  // const projects = projectsInfo.slice(0, 3);
 
   const posts = data.allMdx.nodes.slice(0, 3);
 
   return (
     <div className="relative">
-      {visibility ? (
+      {/* {visibility ? (
         <ProjectShowcase
           data={showcaseData}
           handleClose={onClose}
           handleFlipping={onFlip}
         />
-      ) : (
-        <Layout>
-          <HeroImage />
+      )
+       : ( */}
+      <Layout>
+        <HeroImage />
 
-          <Padding>
-            <main>
-              <section className="flex flex-col lg:flex-row gap-10 my-10 ">
-                <GreetingCard />
-                <IntroductionCard />
-              </section>
+        <Padding>
+          <main>
+            <section className="flex flex-col lg:flex-row gap-10 my-10 ">
+              <GreetingCard />
+              <IntroductionCard />
+            </section>
 
-              <section className="my-10 py-10 flex flex-col justify-center px-20 bg-[url('../images/bg-gradient-vertical.png')] sm:bg-[url('../images/bg-gradient.png')] bg-fixed bg-no-repeat bg-opacity-50 bg-center bg-blend-screen">
-                <h2 className="mb-10 text-center">Latest Posts</h2>
-                <Posts data={posts} />
-                <div className="mx-auto w-64">
-                  <ButtonLink
-                    href="/blog"
-                    label="Explore All Posts "
-                    iconAfter={<GrArticle color="#FFC700" />}
-                  />
-                </div>
-              </section>
+            <section className="my-10 py-10 flex flex-col justify-center px-20 bg-[url('../images/bg-gradient-vertical.png')] sm:bg-[url('../images/bg-gradient.png')] bg-fixed bg-no-repeat bg-opacity-50 bg-center bg-blend-screen">
+              <h2 className="mb-10 text-center">Latest Posts</h2>
+              <Posts data={posts} />
+              <div className="mx-auto w-64">
+                <ButtonLink
+                  href="/blog"
+                  label="Explore All Posts "
+                  iconAfter={<GrArticle color="#FFC700" />}
+                />
+              </div>
+            </section>
 
-              {/* <section className="h-64 flex justify-center m-auto">
+            {/* <section className="h-64 flex justify-center m-auto">
                 <AwesomeWebsites />
               </section> */}
 
-              <section className="mb-10">
+            {/* <section className="mb-10">
                 <h2>
                   <DividerLine />
                   Portfolio
@@ -97,11 +98,11 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
                     iconAfter={<GrProjects color="#FFC700" />}
                   />
                 </div>
-              </section>
-            </main>
-          </Padding>
-        </Layout>
-      )}
+              </section> */}
+          </main>
+        </Padding>
+      </Layout>
+      {/* )} */}
     </div>
   );
 };

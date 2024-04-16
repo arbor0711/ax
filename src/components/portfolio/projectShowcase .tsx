@@ -23,8 +23,25 @@ const ProjectShowcase = ({ data, handleClose, handleFlipping }: Props) => {
   };
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center">
-      <div className="w-11/12 h-11/12   flex flex-col items-center border border-raspberry">
+    <div
+      // className="w-10/12 h-10/12 overflow-y-scroll"
+      style={{ width: "90%", height: "90%", overflowY: "scroll" }}
+    >
+      <div className="flex justify-between items-center w-screen h-screen px-3 absolute">
+        <div
+          className="cursor-pointer text-gray-400 hover:text-white hover:-translate-x-1 transition duration-300"
+          onClick={() => handleClick("backward")}
+        >
+          <IoIosArrowBack size={30} />
+        </div>
+        <div
+          className="cursor-pointer  text-gray-400 hover:text-white hover:translate-x-1 transition duration-300"
+          onClick={() => handleClick("forward")}
+        >
+          <IoIosArrowForward size={30} />
+        </div>
+      </div>
+      <div className="   flex flex-col items-center border border-raspberry">
         {/* TODO: close btn */}
         <button
           className="btn btn-circle absolute top-10 right-10 z-50 "
@@ -34,27 +51,13 @@ const ProjectShowcase = ({ data, handleClose, handleFlipping }: Props) => {
         </button>
 
         {/* TODO: backward/forward btn */}
-        <div className="flex justify-between items-center w-screen h-screen px-3 absolute">
-          <div
-            className="cursor-pointer text-gray-400 hover:text-white hover:-translate-x-1 transition duration-300"
-            onClick={() => handleClick("backward")}
-          >
-            <IoIosArrowBack size={30} />
-          </div>
-          <div
-            className="cursor-pointer  text-gray-400 hover:text-white hover:translate-x-1 transition duration-300"
-            onClick={() => handleClick("forward")}
-          >
-            <IoIosArrowForward size={30} />
-          </div>
-        </div>
 
-        <h2 className="text-h2 md:text-h1 text-gray-100 w-3/4 text-center mt-10">
+        <h2 className="text-h3 md:text-h2 text-gray-100 w-3/4 text-center mt-10">
           {data.title}
         </h2>
 
-        <div className="flex flex-col-reverse md:flex-row mt-5 px-10 gap-10 justify-center items-center">
-          <aside className="flex flex-col items-center w-1/2">
+        <div className="flex flex-col-reverse md:flex-row mt-5 px-10  justify-around items-center">
+          <aside className="flex flex-col items-center w-2/5">
             <a
               className="text-white flex mb-5 z-50"
               href={data.address}
@@ -66,7 +69,7 @@ const ProjectShowcase = ({ data, handleClose, handleFlipping }: Props) => {
               </span>
             </a>
 
-            <div className="rounded-t-xl overflow-hidden mb-3 border border-black border-b-8 h-[360px] w-[480px]">
+            <div className="rounded-t-xl overflow-hidden mb-3 border border-raspberry border-b-8 h-[260px] sm:h-[400px] md:h-[250px]">
               {data.img}
             </div>
           </aside>
