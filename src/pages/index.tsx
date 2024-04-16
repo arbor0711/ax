@@ -56,7 +56,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
                 <IntroductionCard />
               </section>
 
-              <section className="my-10 py-10 flex flex-col justify-center px-20 bg-[url('../images/bg-gradient.png')] bg-fixed bg-no-repeat bg-opacity-50 bg-center bg-blend-screen">
+              <section className="my-10 py-10 flex flex-col justify-center px-20 bg-[url('../images/bg-gradient-vertical.png')] sm:bg-[url('../images/bg-gradient.png')] bg-fixed bg-no-repeat bg-opacity-50 bg-center bg-blend-screen">
                 <h2 className="mb-10 text-center">Latest Posts</h2>
                 <Posts data={posts} />
                 <div className="mx-auto w-64">
