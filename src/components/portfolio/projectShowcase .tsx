@@ -1,5 +1,4 @@
 import React from "react";
-import { FaArrowRight } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { IoCloseSharp } from "react-icons/io5";
 import { Project, projectsInfo } from "../../data/data";
@@ -52,99 +51,7 @@ const ProjectShowcase = ({ data, handleClose, handleFlipping }: Props) => {
 
         {/* TODO: backward/forward btn */}
 
-        <h2 className="text-h3 md:text-h2 text-gray-100 w-3/4 text-center mt-10">
-          {data.title}
-        </h2>
-
-        <div className="flex flex-col-reverse md:flex-row mt-5 px-10  justify-around items-center">
-          <aside className="flex flex-col items-center w-2/5">
-            <a
-              className="text-white flex mb-5 z-50"
-              href={data.address}
-              target="_blank"
-            >
-              Site
-              <span className="-rotate-45 ml-1">
-                <FaArrowRight size={15} />
-              </span>
-            </a>
-
-            <div className="rounded-t-xl overflow-hidden mb-3 border border-raspberry border-b-8 h-[260px] sm:h-[400px] md:h-[250px]">
-              {data.img}
-            </div>
-          </aside>
-
-          <main className="md:pt-5 w-1/2 ">
-            <div>
-              <div className="text-gray-100 font-light text-sm">
-                <span className=" italic ">Website Address:</span>
-                <span className=" text-gray-400 ml-5">{data.address}</span>
-              </div>
-
-              <div className="text-gray-100 font-light text-sm">
-                <span className="text-gray-100 italic font-medium">
-                  Website Type:
-                </span>
-                <span className=" text-gray-400 ml-5">{data.type}</span>
-              </div>
-
-              <div className="text-gray-100 font-light text-sm">
-                <span className="text-gray-100 italic font-medium">
-                  Service Type:{" "}
-                </span>
-                {data.service.map((item, id) => (
-                  <span className=" text-gray-400 ml-5" key={id}>
-                    {item}
-                  </span>
-                ))}
-              </div>
-
-              <div className="text-gray-100 font-light text-sm">
-                <span className="text-gray-100 italic font-medium">
-                  Current Condition:
-                </span>
-                <span className=" text-gray-400 ml-5">
-                  {data.condition
-                    ? "Website Up and Running"
-                    : "Website Currently Unavailable"}
-                </span>
-              </div>
-
-              <div className="text-gray-100 font-light text-sm">
-                <span className="text-gray-100 italic font-medium ">
-                  My Role:{" "}
-                </span>
-                {data.role.map((item, id) => (
-                  <span className=" text-gray-400 ml-5" key={id}>
-                    {item}
-                  </span>
-                ))}
-              </div>
-
-              {data.testimonial && (
-                <div className="flex flex-col gap-5  mt-10">
-                  <div className="flex gap-5 items-center ">
-                    <div className="w-16 rounded-full overflow-hidden">
-                      {data.testimonial.avatar}
-                    </div>
-                    <div className="flex flex-col">
-                      <p className="text-gray-100 ">
-                        {data.testimonial.person}
-                      </p>
-
-                      <p className="text-gray-400 text-base ">
-                        {data.testimonial.position}
-                      </p>
-                    </div>
-                  </div>
-                  <p className="text-gray-100 text-base">
-                    {data.testimonial?.text}
-                  </p>
-                </div>
-              )}
-            </div>
-          </main>
-        </div>
+        <div></div>
       </div>
     </div>
   );

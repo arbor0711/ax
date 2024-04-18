@@ -58,10 +58,20 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: `projects`,
+        path: `./projects`,
+      },
+    },
+
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         name: `pdf`,
         path: `./src/data`,
       },
     },
+    "gatsby-plugin-use-query-params",
+    "gatsby-transformer-remark",
   ],
 };
 

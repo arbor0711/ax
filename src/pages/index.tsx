@@ -1,8 +1,9 @@
-import * as React from "react";
 import { graphql, type PageProps } from "gatsby";
-import { GrArticle, GrProjects } from "react-icons/gr";
+import * as React from "react";
+import { GrArticle } from "react-icons/gr";
 
 // import AwesomeWebsites from "../components/homePage/awesomeWebsites";
+import ButtonLink from "../components/buttonLink";
 import GreetingCard from "../components/homePage/greeting";
 import HeroImage from "../components/homePage/heroImage";
 import IntroductionCard from "../components/homePage/introduction";
@@ -10,43 +11,12 @@ import Layout from "../components/layout";
 import Padding from "../components/padding";
 import Posts from "../components/posts";
 import Seo from "../components/seo";
-import ButtonLink from "../components/buttonLink";
-
-import ProjectShowcase from "../components/portfolio/projectShowcase ";
-import { useState } from "react";
-// import { Project, projectsInfo } from "../data/data";
-import ProjectCard from "../components/portfolio/projectCard";
-import DividerLine from "../components/dividerLine";
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
-  //Project Showcase states and handlers
-  // const [visibility, setVisibility] = useState(false);
-  // const [showcaseData, setShowcaseData] = useState<Project>();
-  // const handleCallback = (data: Project) => {
-  //   setVisibility(!visibility);
-  //   setShowcaseData(data);
-  // };
-  // const onClose = () => {
-  //   setVisibility(!visibility);
-  // };
-  // const onFlip = (id: number) => {
-  //   const data = projectsInfo.find((project) => project.id === id);
-  //   setShowcaseData(data);
-  // };
-  // const projects = projectsInfo.slice(0, 3);
-
   const posts = data.allMdx.nodes.slice(0, 3);
 
   return (
     <div className="relative">
-      {/* {visibility ? (
-        <ProjectShowcase
-          data={showcaseData}
-          handleClose={onClose}
-          handleFlipping={onFlip}
-        />
-      )
-       : ( */}
       <Layout>
         <HeroImage />
 
@@ -102,7 +72,6 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
           </main>
         </Padding>
       </Layout>
-      {/* )} */}
     </div>
   );
 };

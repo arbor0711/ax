@@ -7,7 +7,7 @@
       "alt": "website screen shot."
     },
 
-    "imgSrc": "../images/portfolio/912saakaar.com",
+    "imgSrc": "portfolio/912saakaar.com",
     "title": "Saakar, Specialized Fast Food Spices",
     "address": "https://912saakaar.com/",
     "type": ["Corporate Website"],
@@ -24,7 +24,7 @@
       "alt": "website screen shot."
     },
 
-    "imgSrc": "../images/portfolio/atlas22.co",
+    "imgSrc": "portfolio/atlas22.co",
     "title": "Atlas22 - Real Estate consultant",
     "address": "https://atlas22.co/",
     "type": ["Corporate Website"],
@@ -49,7 +49,7 @@
       "alt": "website screen shot."
     },
 
-    "imgSrc": "../images/portfolio/behsoo.ir",
+    "imgSrc": "portfolio/behsoo.ir",
     "title": "Behsopuyan Technical and Trading Company",
     "address": "https://behsoo.ir/",
     "type": ["Corporate Website"],
@@ -74,7 +74,7 @@
       "alt": "website screen shot."
     },
 
-    "imgSrc": "../images/portfolio/elearningland.com",
+    "imgSrc": "portfolio/elearningland.com",
     "title": "E-LEARNING LAND",
     "address": "https://e-learningland.com/",
     "type": ["E-Learning Website"],
@@ -90,7 +90,7 @@
       "alt": "website screen shot."
     },
 
-    "imgSrc": "../images/portfolio/nbpperfume.com",
+    "imgSrc": "portfolio/nbpperfume.com",
     "title": "Barin Parsian Carpenter Company",
     "address": "https://nbp-perfume.com/",
     "type": ["Corporate Website"],
@@ -106,7 +106,7 @@
       "alt": "website screen shot."
     },
 
-    "imgSrc": "../images/portfolio/osouli.trade",
+    "imgSrc": "portfolio/osouli.trade",
     "title": "Usoli Shojaei Trading & Shipping Companies",
     "address": "https://osouli.trade/",
     "type": ["Corporate Website"],
@@ -122,7 +122,7 @@
       "alt": "website screen shot."
     },
 
-    "imgSrc": "../images/portfolio/www.mehrafarinorg.com",
+    "imgSrc": "portfolio/www.mehrafarinorg.com",
     "title": "Mehr Afarin Charitatief Instituut",
     "address": "https://mehrafarinorg.com/",
     "type": ["NGO Website"],
@@ -147,7 +147,7 @@
       "alt": "website screen shot."
     },
 
-    "imgSrc": "../images/portfolio/tourholiday",
+    "imgSrc": "portfolio/tourholiday",
     "title": "Online Travel Agency",
     "address": "https://wensen.ir/",
     "type": ["E-Commerce Website"],
