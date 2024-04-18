@@ -1,4 +1,4 @@
-import { graphql, type PageProps } from "gatsby";
+import { graphql } from "gatsby";
 import * as React from "react";
 import { GrArticle } from "react-icons/gr";
 
@@ -11,9 +11,11 @@ import Layout from "../components/layout";
 import Padding from "../components/padding";
 import Posts from "../components/posts";
 import Seo from "../components/seo";
+import ProjectsSection from "./../components/portfolio/projectsSection";
 
-const IndexPage: React.FC<PageProps> = ({ data }) => {
+const IndexPage: React.FC = ({ data }: any) => {
   const posts = data.allMdx.nodes.slice(0, 3);
+  const projectsInfo = data.allMarkdownRemark.edges.slice(0, 3);
 
   return (
     <div className="relative">
@@ -43,32 +45,17 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
                 <AwesomeWebsites />
               </section> */}
 
-            {/* <section className="mb-10">
-                <h2>
-                  <DividerLine />
-                  Portfolio
-                </h2>
-                <p className=" leading-9">
-                  As part of my professional endeavors, I enjoy engaging in
-                  various side projects that allow me to delve deeper into my
-                  interests in design and development. I would be glad to share
-                  some of my recent initiatives with you.
-                </p>
-                <div className="my-20 flex flex-wrap flex-col md:flex-row gap-5 justify-center items-center">
-                  {projects.map((project) => (
-                    <div key={project.id}>
-                      <ProjectCard data={project} onClick={handleCallback} />
-                    </div>
-                  ))}
-                </div>
-                <div className="text-center w-64 mx-auto">
-                  <ButtonLink
-                    href="/portfolio"
-                    label="Explore All Projects"
-                    iconAfter={<GrProjects color="#FFC700" />}
-                  />
-                </div>
-              </section> */}
+            <section className="flex flex-col justify-center items-center">
+              <h2>Portfolio</h2>
+              <p className=" leading-9">
+                As part of my professional endeavors, I enjoy engaging in
+                various side projects that allow me to delve deeper into my
+                interests in design and development. I would be glad to share
+                some of my recent initiatives with you.
+              </p>
+
+              <ProjectsSection projectsInfo={projectsInfo} />
+            </section>
           </main>
         </Padding>
       </Layout>
@@ -82,6 +69,24 @@ export const Head = () => <Seo title="Home Page" />;
 
 export const postsQuery = graphql`
   query {
+    allMarkdownRemark(sort: { frontmatter: { title: ASC } }) {
+      edges {
+        node {
+          frontmatter {
+            imgSrc {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+            title
+            slug
+            imgAlt
+            service
+          }
+          id
+        }
+      }
+    }
     allMdx(sort: { frontmatter: { date: DESC } }) {
       nodes {
         frontmatter {

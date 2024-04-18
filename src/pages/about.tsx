@@ -1,18 +1,17 @@
-import * as React from "react";
+import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import ProjectCard from "../components/portfolio/projectCard";
+import * as React from "react";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { GrProjects } from "react-icons/gr";
 import { MdNextPlan } from "react-icons/md";
 import ButtonLink from "../components/buttonLink";
 import Layout from "../components/layout";
 import Padding from "../components/padding";
-import { graphql } from "gatsby";
 import Seo from "../components/seo";
 import Toolkit from "../components/toolkit";
 import { toolkit } from "../data/data";
 import resume from "../data/resume.pdf";
+import ProjectsSection from "./../components/portfolio/projectsSection";
 
 const AboutPage = ({ data }: any) => {
   const [page, setPage] = React.useState(1);
@@ -75,21 +74,9 @@ const AboutPage = ({ data }: any) => {
             </div>
           </section>
 
-          <section className="text-center my-10">
-            <h2 className="text-h2 mt-h2t mb-h2b">Portfolio</h2>
-            <div className="my-20 flex flex-wrap flex-col md:flex-row gap-5 justify-center items-center">
-              {projectsInfo.map((project: any) => (
-                <ProjectCard data={project} />
-              ))}
-            </div>
-
-            <div className="mx-auto w-64">
-              <ButtonLink
-                href="/portfolio"
-                label="See All Projects"
-                iconAfter={<GrProjects color="#FFC700" />}
-              />
-            </div>
+          <section className="flex flex-col justify-center items-center mb-16 ">
+            <h2>Portfolio</h2>
+            <ProjectsSection projectsInfo={projectsInfo} />
           </section>
 
           <section className="flex flex-col justify-center items-center">
