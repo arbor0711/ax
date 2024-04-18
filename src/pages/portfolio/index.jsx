@@ -57,7 +57,6 @@ import Statement from "../../components/portfolio/statement ";
 
 const PortfolioPage = ({ data }) => {
   const projectsInfo = data.allMarkdownRemark.edges;
-  console.log(projectsInfo);
 
   return (
     <Layout>

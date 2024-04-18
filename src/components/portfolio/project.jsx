@@ -1,13 +1,11 @@
-import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../layout";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 const TestPage = ({ data }) => {
   const {
     title,
-    slug,
     imgSrc,
     imgAlt,
     address,
@@ -42,7 +40,7 @@ const TestPage = ({ data }) => {
           <div className="rounded-t-xl overflow-hidden mb-3 border border-navy border-b-8 h-[260px] sm:h-[400px] md:h-[250px]">
             <GatsbyImage
               image={getImage(imgSrc.childImageSharp)}
-              alt="some text"
+              alt={imgAlt}
               className=" animate-projectPage-background"
             />
           </div>
@@ -121,7 +119,6 @@ export const query = graphql`
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         title
-        slug
         imgAlt
         address
         type
