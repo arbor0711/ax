@@ -5,7 +5,7 @@
   </a>
 </p>
 
-# Frontend Developer Portfolio & Blog
+# Alireza Keshavarz Shirazi Portfolio & Blog
 
 
 Welcome to my frontend developer portfolio and blog! This website showcases my projects, skills, and insights into frontend development best practices, seminars, summits, and new technologies.
