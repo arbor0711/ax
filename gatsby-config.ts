@@ -9,8 +9,11 @@ const config: GatsbyConfig = {
     DEV_SSR: true,
   },
   siteMetadata: {
-    title: `ax`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "Alireza Keshavarz Shirazi - Frontend Developer Portfolio and Blog",
+    description:
+      "Explore the frontend development portfolio and blog of Alireza Keshavarz Shirazi. Discover projects, skillsets, and insights on best practices, seminars, summits, and new technologies.",
+    author: "Alireza Keshavarz Shirazi",
+    siteUrl: "https://www.devscoops.com",
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
