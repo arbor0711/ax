@@ -1,7 +1,11 @@
-
+---
+title: Frontend Developer Portfolio and Blog
+---
+<br/>
+<br/>
 <p align="center">
   <a href="https://www.devscoops.com">
-    <img alt="devscoops" src="https://www.devscoops.com/static/520ab6a6904eaba9ffb863fb5f087d1b/71959/logo-dark.webp" width="60" />
+    <img alt="devscoops" src="https://www.devscoops.com/static/520ab6a6904eaba9ffb863fb5f087d1b/71959/logo-dark.webp" height="20" />
   </a>
 </p>
 
