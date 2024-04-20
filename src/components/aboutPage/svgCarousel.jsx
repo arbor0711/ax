@@ -45,13 +45,13 @@ const SvgCarousel = () => {
     Icons.Figma,
   ];
   return (
-    <div className="flex flex-col gap-7">
+    <div className="flex flex-col gap-7 mt-16 mb-24">
       <div className="block">
         <div className="overflow-hidden whitespace-nowrap  group">
           <div className="inline-block animate-top-row  group-hover:[animation-play-state:paused]">
             {rowOne.map((Svg, index) => (
               <Svg
-                className="size-[60px] grayscale hover:grayscale-0 inline ml-5"
+                className=" size-[40px] md:size-[50px] grayscale hover:grayscale-0 inline ml-5"
                 key={index}
               />
             ))}
@@ -59,7 +59,7 @@ const SvgCarousel = () => {
           <div className="inline-block animate-top-row  group-hover:[animation-play-state:paused]">
             {rowOne.map((Svg, index) => (
               <Svg
-                className="size-[60px] grayscale hover:grayscale-0 inline ml-5"
+                className="size-[40px] md:size-[50px] grayscale hover:grayscale-0 inline ml-5"
                 key={index}
               />
             ))}
@@ -72,7 +72,7 @@ const SvgCarousel = () => {
           <div className="inline-block animate-middle-row  group-hover:[animation-play-state:paused]">
             {rowTwo.map((Svg, index) => (
               <Svg
-                className="size-[60px] grayscale hover:grayscale-0 inline ml-5"
+                className="size-[40px] md:size-[50px] grayscale hover:grayscale-0 inline ml-5"
                 key={index}
               />
             ))}
@@ -80,7 +80,7 @@ const SvgCarousel = () => {
           <div className="inline-block animate-middle-row  group-hover:[animation-play-state:paused]">
             {rowTwo.map((Svg, index) => (
               <Svg
-                className="size-[60px] grayscale hover:grayscale-0 inline ml-5"
+                className="size-[40px] md:size-[50px] grayscale hover:grayscale-0 inline ml-5"
                 key={index}
               />
             ))}
@@ -93,7 +93,7 @@ const SvgCarousel = () => {
           <div className="inline-block animate-bottom-row  group-hover:[animation-play-state:paused]">
             {rowThree.map((Svg, index) => (
               <Svg
-                className="size-[60px] grayscale hover:grayscale-0 inline ml-5"
+                className="size-[40px] md:size-[50px] grayscale hover:grayscale-0 inline ml-5"
                 key={index}
               />
             ))}
@@ -101,7 +101,7 @@ const SvgCarousel = () => {
           <div className="inline-block animate-bottom-row  group-hover:[animation-play-state:paused]">
             {rowThree.map((Svg, index) => (
               <Svg
-                className="size-[60px] grayscale hover:grayscale-0 inline ml-5"
+                className="size-[40px] md:size-[50px] grayscale hover:grayscale-0 inline ml-5"
                 key={index}
               />
             ))}
