@@ -1,7 +1,7 @@
 import React from "react";
 
 // Import all SVG components from the assets folder
-import * as Icons from "../assets";
+import * as Icons from "../../assets";
 
 const SvgCarousel = () => {
   const rowOne = [
