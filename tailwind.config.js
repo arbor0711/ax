@@ -70,6 +70,7 @@ module.exports = {
           "60%": { transform: "rotate(0.0deg)" },
           "100%": { transform: "rotate(0.0deg)" },
         },
+
         text: {
           "0%, 100%": {
             "background-size": "200% 200%",
@@ -80,12 +81,22 @@ module.exports = {
             "background-position": "right center",
           },
         },
-        bg: {
-          "0%, 100%": {
-            "background-position": "top",
+
+        moveLeft: {
+          "0%": {
+            transform: "translateX(0)",
           },
-          "50%": {
-            "background-position": "bottom",
+          "100%": {
+            transform: "translateX(-100%)",
+          },
+        },
+
+        moveRight: {
+          "0%": {
+            transform: "translateX(-100%)",
+          },
+          "100%": {
+            transform: "translateX(0%)",
           },
         },
       },
@@ -93,7 +104,12 @@ module.exports = {
         "waving-hand": "wave 2s linear infinite",
         "colorful-text": "text 3s ease infinite",
         "blinking-text": "blink 1.2s linear infinite",
-        "projectPage-background": "bg 35s linear infinite",
+        "top-row": "moveLeft 20s linear infinite",
+        "middle-row": "moveRight 14s linear infinite",
+        "bottom-row": "moveLeft 12s linear infinite",
+        "top-row-smallSc": "moveLeft 5s linear infinite",
+        "middle-row-smallSc": "moveRight 7s linear infinite",
+        "bottom-row-smallSc": "moveLeft 6s linear infinite",
       },
     },
   },

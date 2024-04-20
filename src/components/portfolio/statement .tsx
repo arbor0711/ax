@@ -4,7 +4,7 @@ import { IoHeartCircle } from "react-icons/io5";
 
 const Statement = () => {
   return (
-    <article className="  bg-bg_bar pt-3 pb-10 md:px-20 mx-auto w-11/12 rounded-xl border-1 dark:z-10 ">
+    <article className="  bg-bg_bar px-5 pt-3 pb-10 md:px-20 mx-auto w-11/12 rounded-xl border-1 dark:z-10 ">
       <h3 className=" text-gray-400">
         <div className="flex  justify-center align-middle items-center mb-8">
           <span className="relative  h-4 w-4  ">

@@ -72,6 +72,14 @@ const config: GatsbyConfig = {
     },
     "gatsby-plugin-use-query-params",
     "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
   ],
 };
 

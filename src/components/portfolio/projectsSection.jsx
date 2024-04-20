@@ -8,7 +8,7 @@ const ProjectsSection = ({ projectsInfo }) => {
     <section>
       <div className="my-20 flex flex-wrap flex-col md:flex-row gap-5 justify-center items-center">
         {projectsInfo.map((project) => (
-          <ProjectCard data={project} />
+          <ProjectCard data={project} key={project.node.id} />
         ))}
       </div>
 

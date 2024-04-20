@@ -5,13 +5,13 @@ import { FaCloudDownloadAlt } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { MdNextPlan } from "react-icons/md";
 import ButtonLink from "../components/buttonLink";
+import DividerLine from "../components/dividerLine";
 import Layout from "../components/layout";
 import Padding from "../components/padding";
 import Seo from "../components/seo";
-import Toolkit from "../components/toolkit";
-import { toolkit } from "../data/data";
 import resume from "../data/resume.pdf";
 import ProjectsSection from "./../components/portfolio/projectsSection";
+import SvgCarousel from "../components/SvgCarousel";
 
 const AboutPage = ({ data }: any) => {
   const [page, setPage] = React.useState(1);
@@ -20,11 +20,11 @@ const AboutPage = ({ data }: any) => {
 
   return (
     <Layout pageTitle="About Me">
-      <Padding>
-        <main>
-          <section className="flex flex-col items-center md:flex-row md:justify-between px-10">
-            <div className="w-full md:w-2/4">
-              <p>
+      <main>
+        <Padding>
+          <section className="flex flex-col items-center md:justify-between px-10">
+            <div className=" md:flex ">
+              <p className="">
                 Hi. I am Alireza Keshavarz Shirazi, a curious web developer with
                 a deep sense of ownership, driving me to go the extra mile in
                 every project to ensure that every detail of the product backlog
@@ -46,34 +46,37 @@ const AboutPage = ({ data }: any) => {
                 proficiency in TypeScript enhances code quality and
                 maintainability.
               </p>
-              <div className="w-64">
-                <ButtonLink
-                  href="/contact"
-                  label="Lets Work Together"
-                  iconAfter={<FaArrowRightLong color="#FFC700" />}
-                />
-              </div>
+              <StaticImage
+                className=" mt-10 float-right md:float-none md:ml-5 md:my-auto   min-h-[300px] min-w-[300px]    size-fit  rounded-3xl md:rounded-full"
+                alt="Alireza Keshavarz Shirazi"
+                src="../images/aboutMe.jpg"
+              />
             </div>
-
-            <StaticImage
-              className="float-right m-5  w-2/3 md:w-1/3 size-fit "
-              style={{ borderRadius: "100%" }}
-              alt="Alireza Keshavarz Shirazi"
-              src="../images/aboutMe.jpg"
-            />
-          </section>
-
-          <section className="text-center my-10">
-            <h2 className="text-h2 mt-h2t mb-h2b">Tech Skills</h2>
-            <div className="flex  text-center flex-wrap justify-center ">
-              {toolkit.map((skillSet) => (
-                <div key={skillSet.segment} className=" m-5">
-                  <Toolkit skillSet={skillSet} />
-                </div>
-              ))}
+            <div className="w-64 mt-10">
+              <ButtonLink
+                href="/contact"
+                label="Lets Work Together"
+                iconAfter={<FaArrowRightLong color="#FFC700" />}
+              />
             </div>
           </section>
+        </Padding>
 
+        <section className="text-center my-10 ">
+          <div className="flex items-center px-10">
+            <DividerLine />
+            <h2 className="text-h2 mb-3 ">Tech Skills</h2>
+          </div>
+          <p className=" px-10 text-left mb-10 max-w-[600px]">
+            As a developer, I've worked with various frameworks, libraries, and
+            tools to bring my projects to life. I'm a continuous learner who
+            believes in expanding my toolset and exploring new technologies.
+            Though I'm proud of my achievements, I'm always looking for ways to
+            discover and master new tools.
+          </p>
+          <SvgCarousel />
+        </section>
+        <Padding>
           <section className="flex flex-col justify-center items-center mb-16 ">
             <h2>Portfolio</h2>
             <ProjectsSection projectsInfo={projectsInfo} />
@@ -136,8 +139,8 @@ const AboutPage = ({ data }: any) => {
               </button>
             </div>
           </section>
-        </main>
-      </Padding>
+        </Padding>
+      </main>
     </Layout>
   );
 };
