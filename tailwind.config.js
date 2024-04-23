@@ -99,6 +99,11 @@ module.exports = {
             transform: "translateX(0%)",
           },
         },
+        upward: {
+          "0%": { transform: "translateY(0%)" },
+
+          "100%": { transform: "translateY(-100%)" },
+        },
       },
       animation: {
         "waving-hand": "wave 2s linear infinite",
@@ -110,6 +115,7 @@ module.exports = {
         "top-row-smallSc": "moveLeft 5s linear infinite",
         "middle-row-smallSc": "moveRight 7s linear infinite",
         "bottom-row-smallSc": "moveLeft 6s linear infinite",
+        "project-page-background": "upward 40s infinite linear",
       },
     },
   },

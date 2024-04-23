@@ -1,6 +1,6 @@
 ---
 slug: osouli
-title: Usoli Shojaei Trading & Shipping
+title: Osoli Shojaei Trading & Shipping
 imgSrc: ../src/images/portfolio/osouli.trade.png
 imgAlt: Osouli website screen shot
 address: https://osouli.trade/
