@@ -1,49 +1,43 @@
+---
+title: Frontend Developer Portfolio and Blog
+---
+<br/>
+<br/>
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  <a href="https://www.devscoops.com">
+    <img alt="devscoops" src="https://www.devscoops.com/static/520ab6a6904eaba9ffb863fb5f087d1b/71959/logo-dark.webp" height="20" />
   </a>
 </p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
 
-## 🚀 Quick start
+# Alireza Keshavarz Shirazi Portfolio & Blog
 
-1.  **Create a Gatsby site.**
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+Welcome to my frontend developer portfolio and blog! This website showcases my projects, skills, and insights into frontend development best practices, seminars, summits, and new technologies.
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+## Technologies Used
 
-2.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+- [Gatsby.js](https://www.gatsbyjs.com/): Used as the framework for building the website.
+- [Tailwind CSS](https://tailwindcss.com/): Utilized for styling and design.
+- [GraphQL](https://graphql.org/): Implemented for querying data from various sources.
+- [TypeScript](https://www.typescriptlang.org/): Used to add static typing to JavaScript.
+ 
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
 
-3.  **Open the code and start customizing!**
 
-    Your site is now running at http://localhost:8000!
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+## Features
 
-4.  **Learn more**
+- **Portfolio**: Explore my projects and skills showcased in an organized manner.
+- **Blog**: Discover monthly posts discussing frontend development best practices, seminars, summits, and new technologies.
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+## 🚀 Getting Started
 
-## 🚀 Quick start (Netlify)
+To get a local copy up and running, follow these simple steps:
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+1. Clone the repository:
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+   ```bash
+   git clone https://github.com/arbor0711/devscoop.com.git
+
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
