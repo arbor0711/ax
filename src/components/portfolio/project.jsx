@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
-
+import { IoArrowBackCircle } from "react-icons/io5";
 const ProjectPage = ({ data }) => {
   const {
     slug,
@@ -46,7 +46,7 @@ const ProjectPage = ({ data }) => {
   };
 
   const goBack = () => {
-    navigate(-1);
+    navigate(`/portfolio`);
   };
 
   const styleDetailsKey = "italic font-medium";
@@ -59,9 +59,12 @@ const ProjectPage = ({ data }) => {
         className="animate-project-page-background absolute object-cover width-screen height-full"
       />
       {/* FIXME: Add a back button */}
-      {/* <button onClick={goBack} className="absolute top-14 left-20 z-50   ">
+      <button
+        onClick={goBack}
+        className="absolute top-16 md:top-14 left-12 md:left-20 z-50   "
+      >
         <IoArrowBackCircle size={50} color="#FDC600" />
-      </button> */}
+      </button>
       <div className="absolute  top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]  z-50 ">
         <div className="flex justify-between w-screen">
           <button onClick={carousel("prev")}>
@@ -79,7 +82,9 @@ const ProjectPage = ({ data }) => {
         }}
       >
         <div className="w-screen min-h-[90vh] py-3 md:py-5 sm:px-3 md:px-16 text-texty dark:text-gray-100 ">
-          <h2 className="text-h3 md:text-h2 px-10 text-center">{title}</h2>
+          <h2 className="text-h3 md:text-h2 px-10 text-center mt-20 sm:mt-8 md:mt-5">
+            {title}
+          </h2>
           <div className="flex flex-col  px-10  justify-around items-center bg-transparent h-[70vh]">
             <div
               className="flex gap-5 justify-center items-center
@@ -141,7 +146,7 @@ const ProjectPage = ({ data }) => {
 
             <main className=" w-11/12 ">
               {testimonial && (
-                <div className="flex  gap-5 flex-col md:flex-row">
+                <div className="flex  gap-5 flex-col md:flex-row mt-10">
                   <div className="flex gap-5 items-center ">
                     <div className="w-16 rounded-full overflow-hidden">
                       <GatsbyImage
